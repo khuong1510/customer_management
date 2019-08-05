@@ -1594,10 +1594,13 @@ if($message == ''){
             foreach($contacts as $contact){
 
                 $data = array();
-                $data['account'] = $contact['Full Name'];
+                $data['account'] = $contact['﻿Full Name'];
                 $data['email'] = $contact['Email'];
                 $data['phone'] = $contact['Phone'];
                 $data['address'] = $contact['Address'];
+                $data['street'] = $contact['Street'];
+                $data['ward'] = $contact['Ward'];
+                $data['district'] = $contact['District'];
                 $data['city'] = $contact['City'];
                 $data['zip'] = $contact['Zip'];
                 $data['state'] = $contact['State'];
@@ -2836,7 +2839,10 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
         }
 
 //        $columns[] = 'email';
-        $columns[] = 'address';
+//        $columns[] = 'address';
+        $columns[] = 'street';
+        $columns[] = 'ward';
+        $columns[] = 'district';
         $columns[] = 'city';
         $columns[] = 'phone';
         $columns[] = 'transport_name';
@@ -2875,7 +2881,10 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
         }
 
 //        $d->select('email');
-        $d->select('address');
+//        $d->select('address');
+        $d->select('street');
+        $d->select('ward');
+        $d->select('district');
         $d->select('city');
         $d->select('phone');
         $d->select('transport_name');
@@ -2900,11 +2909,27 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
 //
 //        }
 
-        $address = _post('address');
+        $street = _post('street');
 
-        if($address != ''){
+        if($street != ''){
 
-            $d->where_like('address',"%$address%");
+            $d->where_like('street',"%$street%");
+
+        }
+
+        $ward = _post('ward');
+
+        if($ward != ''){
+
+            $d->where_like('ward',"%$ward%");
+
+        }
+
+        $district = _post('district');
+
+        if($district != ''){
+
+            $d->where_like('district',"%$district%");
 
         }
 
@@ -3199,14 +3224,16 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
                     2 => '<a href="'.U.'contacts/view/'.$xs['id'].'">'.$img.'</a>',
                     3 => $contact_details,
 //                    4 => htmlentities($xs['email']),
-                    4 => htmlentities($xs['address']),
-                    5 => htmlentities($xs['city']),
-                    6 => htmlentities($xs['phone']),
-                    7 => htmlentities($xs['transport_name']),
-                    8 => htmlentities($xs['transport_phone']),
-                    9 => htmlentities($xs['transport_address']),
-                    10 => htmlentities($xs['store']),
-                    11 =>  '
+                    4 => htmlentities($xs['street']),
+                    5 => htmlentities($xs['ward']),
+                    6 => htmlentities($xs['district']),
+                    7 => htmlentities($xs['city']),
+                    8 => htmlentities($xs['phone']),
+                    9 => htmlentities($xs['transport_name']),
+                    10 => htmlentities($xs['transport_phone']),
+                    11 => htmlentities($xs['transport_address']),
+                    12 => htmlentities($xs['store']),
+                    13 =>  '
                 <a href="'.U.'contacts/view/'.$xs['id'].'" class="btn btn-primary btn-xs cview" id="vid'.$xs['id'].'"><i class="fa fa-search"></i> </a>
                 <a href="'.U.'contacts/view/'.$xs['id'].'/edit/" class="btn btn-warning btn-xs cedit" id="eid'.$xs['id'].'"><i class="glyphicon glyphicon-pencil"></i> </a>
                 <a href="#" class="btn btn-danger btn-xs cdelete" id="uid'.$xs['id'].'"><i class="fa fa-trash"></i> </a>
@@ -3215,7 +3242,7 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
                 <a href="#" class="btn btn-danger btn-xs c-remove" style="display: none" id="eirmid'.$xs['id'].'"><i class="glyphicon glyphicon-remove"></i></a>
                 ',
 
-                    12 => $xs['id'],
+                    14 => $xs['id'],
 
                     "DT_RowId" => 'dtr_'.$xs['id']
                 ];
@@ -3261,7 +3288,9 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
 
             $account = _post('account');
             $phone = _post('phone');
-            $address = _post('address');
+            $street = _post('street');
+            $ward = _post('ward');
+            $district = _post('district');
             $city = _post('city');
             $transportName = _post('transport_name');
             $transportPhone = _post('transport_phone');
@@ -3293,7 +3322,9 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
             if($msg == '') {
                 $d->account = $account;
                 $d->phone = $phone;
-                $d->address = $address;
+                $d->street = $street;
+                $d->ward = $ward;
+                $d->district = $district;
                 $d->city = $city;
                 $d->transport_name = $transportName;
                 $d->transport_phone = $transportPhone;

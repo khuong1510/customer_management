@@ -58,7 +58,9 @@
 
 
                                 {*<th>{$_L['Email']}</th>*}
-                                <th>{$_L['Address']}</th>
+                                <th>{$_L['Street']}</th>
+                                <th>{$_L['Ward']}</th>
+                                <th>{$_L['District']}</th>
                                 <th>{$_L['City']}</th>
                                 <th>{$_L['Phone']}</th>
                                 <th>{$_L['Transport Name']}</th>
@@ -88,7 +90,9 @@
 
 
                                 {*<td><input type="email" id="filter_email" name="filter_email" class="form-control"></td>*}
-                                <td><input type="text" id="filter_address" name="filter_address" class="form-control"></td>
+                                <td><input type="text" id="filter_street" name="filter_street" class="form-control"></td>
+                                <td><input type="text" id="filter_ward" name="filter_ward" class="form-control"></td>
+                                <td><input type="text" id="filter_district" name="filter_district" class="form-control"></td>
                                 <td><input type="text" id="filter_city" name="filter_city" class="form-control"></td>
                                 <td><input type="text" id="filter_phone" name="filter_phone" class="form-control"></td>
                                 <td><input type="text" id="filter_transport_name" name="filter_transport_name" class="form-control"></td>
@@ -148,7 +152,9 @@
 
                         d.account = $('#account').val();
                         // d.email = $('#filter_email').val();
-                        d.address = $('#filter_address').val();
+                        d.street = $('#filter_street').val();
+                        d.ward = $('#filter_ward').val();
+                        d.district = $('#filter_district').val();
                         d.city = $('#filter_city').val();
                         d.transport_name = $('#filter_transport_name').val();
                         d.transport_address = $('#filter_transport_address').val();
@@ -259,13 +265,29 @@
                         "orderable": false,
                         "targets": 4,
                         "render": function ( data, type, row ) {
-                            return '<span id="address_val_'+ row[1] +'">' + data + '</span>' +
-                                '<input type="hidden" name="address" class="form-control edit-inline-input" id="address_'+ row[1] +'" value="' + data +'" style="width: 100%"/>';
+                            return '<span id="street_val_'+ row[1] +'">' + data + '</span>' +
+                                '<input type="hidden" name="street" class="form-control edit-inline-input" id="street_'+ row[1] +'" value="' + data +'" style="width: 100%"/>';
                         }
                     },
                     {
                         "orderable": false,
                         "targets": 5,
+                        "render": function ( data, type, row ) {
+                            return '<span id="ward_val_'+ row[1] +'">' + data + '</span>' +
+                                '<input type="hidden" name="ward" class="form-control edit-inline-input" id="ward_'+ row[1] +'" value="' + data +'" style="width: 100%"/>';
+                        }
+                    },
+                    {
+                        "orderable": false,
+                        "targets": 6,
+                        "render": function ( data, type, row ) {
+                            return '<span id="district_val_'+ row[1] +'">' + data + '</span>' +
+                                '<input type="hidden" name="district" class="form-control edit-inline-input" id="district_'+ row[1] +'" value="' + data +'" style="width: 100%"/>';
+                        }
+                    },
+                    {
+                        "orderable": false,
+                        "targets": 7,
                         "render": function ( data, type, row ) {
                             return '<span id="city_val_'+ row[1] +'">' + data + '</span>' +
                                 '<input type="hidden" name="city" class="form-control edit-inline-input" id="city_'+ row[1] +'" value="' + data +'" style="width: 100%" />';
@@ -273,7 +295,7 @@
                     },
                     {
                         "orderable": false,
-                        "targets": 6,
+                        "targets": 8,
                         "render": function ( data, type, row ) {
                             return '<span id="phone_val_'+ row[1] +'">' + data + '</span>' +
                                 '<input type="hidden" name="phone" class="form-control edit-inline-input" id="phone_'+ row[1] +'" value="' + data +'" style="width: 100%" />';
@@ -281,7 +303,7 @@
                     },
                     {
                         "orderable": false,
-                        "targets": 7,
+                        "targets": 9,
                         "render": function ( data, type, row ) {
                             return '<span id="transport_name_val_'+ row[1] +'">' + data + '</span>' +
                                 '<input type="hidden" name="transport_name" class="form-control edit-inline-input" id="transport_name_'+ row[1] +'" value="' + data +'" style="width: 100%" />';
@@ -289,7 +311,7 @@
                     },
                     {
                         "orderable": false,
-                        "targets": 8,
+                        "targets": 10,
                         "render": function ( data, type, row ) {
                             return '<span id="transport_phone_val_'+ row[1] +'">' + data + '</span>' +
                                 '<input type="hidden" name="transport_phone" class="form-control edit-inline-input" id="transport_phone_'+ row[1] +'" value="' + data +'" style="width: 100%" />';
@@ -297,7 +319,7 @@
                     },
                     {
                         "orderable": false,
-                        "targets": 9,
+                        "targets": 11,
                         "render": function ( data, type, row ) {
                             return '<span id="transport_address_val_'+ row[1] +'">' + data + '</span>' +
                                 '<input type="hidden" name="transport_address" class="form-control edit-inline-input" id="transport_address_'+ row[1] +'" value="' + data +'" style="width: 100%" />';
@@ -305,7 +327,7 @@
                     },
                     {
                         "orderable": false,
-                        "targets": 10,
+                        "targets": 12,
                         "render": function ( data, type, row ) {
                             return '<span id="store_val_'+ row[1] +'">' + data + '</span>' +
                                 '<input type="hidden" name="store" class="form-control edit-inline-input" id="store_'+ row[1] +'" value="' + data +'" style="width: 100%" />';
@@ -540,7 +562,9 @@
                 $('#eirmid' + id).show();
 
                 $('#account_val_' + id).hide();
-                $('#address_val_' + id).hide();
+                $('#street_val_' + id).hide();
+                $('#ward_val_' + id).hide();
+                $('#district_val_' + id).hide();
                 $('#city_val_' + id).hide();
                 $('#phone_val_' + id).hide();
                 $('#transport_name_val_' + id).hide();
@@ -557,7 +581,9 @@
                 $('#eirmid' + id).hide();
 
                 $('#account_val_' + id).show();
-                $('#address_val_' + id).show();
+                $('#street_val_' + id).show();
+                $('#ward_val_' + id).show();
+                $('#district_val_' + id).show();
                 $('#city_val_' + id).show();
                 $('#phone_val_' + id).show();
                 $('#transport_name_val_' + id).show();
@@ -585,7 +611,9 @@
 
                 var account = $('#account_' + id).val();
                 var phone = $('#phone_' + id).val();
-                var address = $('#address_' + id).val();
+                var street = $('#street_' + id).val();
+                var ward = $('#ward_' + id).val();
+                var district = $('#district_' + id).val();
                 var city = $('#city_' + id).val();
                 var transportName = $('#transport_name_' + id).val();
                 var transportAddress = $('#transport_address_' + id).val();
@@ -597,7 +625,9 @@
                     {
                         account: account,
                         phone: phone,
-                        address: address,
+                        street: street,
+                        ward: ward,
+                        district: district,
                         city: city,
                         transport_name: transportName,
                         transport_address: transportAddress,
@@ -609,7 +639,9 @@
 
                         if (data.status) {
                             $('#account_val_' + id).html(account);
-                            $('#address_val_' + id).html(address);
+                            $('#street_val_' + id).html(street);
+                            $('#ward_val_' + id).html(ward);
+                            $('#district_val_' + id).html(district);
                             $('#city_val_' + id).html(city);
                             $('#phone_val_' + id).html(phone);
                             $('#transport_name_val_' + id).html(transportName);

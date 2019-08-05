@@ -1200,4 +1200,6 @@ $_L = [
     'Transport Phone' => 'Transport Phone',
     'Transport Address' => 'Transport Address',
     'Invalid Transport Phone' => 'Invalid Transport Phone',
+    'Ward' => 'Ward',
+    'District' => 'District',
 ];

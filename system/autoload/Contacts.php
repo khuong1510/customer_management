@@ -58,6 +58,9 @@ Class Contacts
             $email = '';
             $phone = '';
             $address = '';
+            $street = '';
+            $ward = '';
+            $district = '';
             $city = '';
             $zip = '';
             $state = '';
@@ -103,6 +106,18 @@ Class Contacts
 
             if(isset($data['address'])){
                 $address = $data['address'];
+            }
+
+            if(isset($data['street'])){
+                $street = $data['street'];
+            }
+
+            if(isset($data['ward'])){
+                $ward = $data['ward'];
+            }
+
+            if(isset($data['district'])){
+                $district = $data['district'];
             }
 
             if(isset($data['city'])){
@@ -183,6 +198,9 @@ Class Contacts
             $d->email = $email;
             $d->phone = $phone;
             $d->address = $address;
+            $d->street = $street;
+            $d->ward = $ward;
+            $d->district = $district;
             $d->city = $city;
             $d->zip = $zip;
             $d->state = $state;
