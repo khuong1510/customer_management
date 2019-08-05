@@ -639,10 +639,17 @@ _L[\'New Company\'] = \''.$_L['New Company'].'\';
         $currency = _post('currency');
 
         $address = _post('address');
+        $street = _post('street');
+        $ward = _post('ward');
+        $district = _post('district');
         $city = _post('city');
         $state = _post('state');
         $zip = _post('zip');
         $country = _post('country');
+        $transportName = _post('transport_name');
+        $transportAddress = _post('transport_address');
+        $transportPhone = _post('transport_phone');
+        $store = _post('store');
 
 
         $code = _post('code');
@@ -819,11 +826,18 @@ _L[\'New Company\'] = \''.$_L['New Company'].'\';
             $d->email = $email;
             $d->phone = $phone;
             $d->address = $address;
+            $d->street = $street;
+            $d->ward = $ward;
+            $d->district = $district;
             $d->city = $city;
             $d->zip = $zip;
             $d->state = $state;
             $d->country = $country;
             $d->tags = Arr::arr_to_str($tags);
+            $d->transport_name = $transportName;
+            $d->transport_address = $transportAddress;
+            $d->transport_phone = $transportPhone;
+            $d->store = $store;
 
             //others
             $d->fname = '';
@@ -1041,10 +1055,17 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
 
             $phone = _post('phone');
             $address = _post('address');
+            $street = _post('street');
+            $ward = _post('ward');
+            $district = _post('district');
             $city = _post('city');
             $state = _post('state');
             $zip = _post('zip');
             $country = _post('country');
+            $transportName = _post('transport_name');
+            $transportAddress = _post('transport_address');
+            $transportPhone = _post('transport_phone');
+            $store = _post('store');
 
             $username = _post('username');
 
@@ -1151,10 +1172,17 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
                 $d->tags = Arr::arr_to_str($tags);
                 $d->phone = $phone;
                 $d->address = $address;
+                $d->street = $street;
+                $d->ward = $ward;
+                $d->district = $district;
                 $d->city = $city;
                 $d->zip = $zip;
                 $d->state = $state;
                 $d->country = $country;
+                $d->transport_name = $transportName;
+                $d->transport_address = $transportAddress;
+                $d->transport_phone = $transportPhone;
+                $d->store = $store;
 
                 $d->username = $username;
 

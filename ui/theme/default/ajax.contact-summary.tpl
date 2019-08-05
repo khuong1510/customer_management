@@ -21,12 +21,19 @@
     {/if}
 
     <strong>{$_L['Address']}: </strong> {if ($d['address']) neq ''} {$d['address']} {else} N/A {/if} <br>
+    <strong>{$_L['Street']}: </strong> {if ($d['street']) neq ''} {$d['street']} {else} N/A {/if} <br>
+    <strong>{$_L['Ward']}: </strong> {if ($d['ward']) neq ''} {$d['ward']} {else} N/A {/if} <br>
+    <strong>{$_L['District']}: </strong> {if ($d['district']) neq ''} {$d['district']} {else} N/A {/if} <br>
     <strong>{$_L['City']}: </strong> {if ($d['city']) neq ''} {$d['city']} {else} N/A {/if} <br>
     <strong>{$_L['State Region']}: </strong> {if ($d['state']) neq ''} {$d['state']} {else} N/A {/if} <br>
     <strong>{$_L['ZIP Postal Code']}: </strong> {if ($d['zip']) neq ''} {$d['zip']} {else} N/A {/if} <br>
     <strong>{$_L['Country']}: </strong> {if ($d['country']) neq ''} {$d['country']} {else} N/A {/if} <br>
     <strong>{$_L['Tags']}: </strong> {if ($d['tags']) neq ''} {$d['tags']} {else} N/A {/if} <br>
     <strong>{$_L['Group']}: </strong> {if ($d['gname']) neq ''} {$d['gname']} {else} N/A {/if} <br>
+    <strong>{$_L['Transport Name']}: </strong> {if ($d['transport_name']) neq ''} {$d['transport_name']} {else} N/A {/if} <br>
+    <strong>{$_L['Transport Phone']}: </strong> {if ($d['transport_phone']) neq ''} {$d['transport_phone']} {else} N/A {/if} <br>
+    <strong>{$_L['Transport Address']}: </strong> {if ($d['transport_address']) neq ''} {$d['transport_address']} {else} N/A {/if} <br>
+    <strong>{$_L['Store']}: </strong> {if ($d['store']) neq ''} {$d['store']} {else} N/A {/if} <br>
 
     {foreach $cf as $c}
 

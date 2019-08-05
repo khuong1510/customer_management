@@ -94,6 +94,27 @@
 
         </div>
     </div>
+
+    <div class="form-group"><label class="col-lg-2 control-label" for="street">{$_L['Street']}</label>
+
+        <div class="col-lg-10"><input type="text" id="street" name="street" class="form-control" value="{$d['street']}">
+
+        </div>
+    </div>
+
+    <div class="form-group"><label class="col-lg-2 control-label" for="ward">{$_L['Ward']}</label>
+
+        <div class="col-lg-10"><input type="text" id="ward" name="ward" class="form-control" value="{$d['ward']}">
+
+        </div>
+    </div>
+
+    <div class="form-group"><label class="col-lg-2 control-label" for="district">{$_L['District']}</label>
+
+        <div class="col-lg-10"><input type="text" id="district" name="district" class="form-control" value="{$d['district']}">
+
+        </div>
+    </div>
     <div class="form-group"><label class="col-lg-2 control-label" for="city">{$_L['City']}</label>
 
         <div class="col-lg-10"><input type="text" id="city" name="city" class="form-control" value="{$d['city']}">
@@ -259,6 +280,35 @@
 
         </div>
     </div>
+
+    <div class="form-group"><label class="col-lg-2 control-label" for="transport_name">{$_L['Transport Name']}</label>
+
+        <div class="col-lg-10"><input type="text" id="transport_name" name="transport_name" class="form-control" value="{$d['transport_name']}">
+
+        </div>
+    </div>
+
+    <div class="form-group"><label class="col-lg-2 control-label" for="transport_phone">{$_L['Transport Phone']}</label>
+
+        <div class="col-lg-10"><input type="text" id="transport_phone" name="transport_phone" class="form-control" value="{$d['transport_phone']}">
+
+        </div>
+    </div>
+
+    <div class="form-group"><label class="col-lg-2 control-label" for="transport_address">{$_L['Transport Address']}</label>
+
+        <div class="col-lg-10"><input type="text" id="transport_address" name="transport_address" class="form-control" value="{$d['transport_address']}">
+
+        </div>
+    </div>
+
+    <div class="form-group"><label class="col-lg-2 control-label" for="store">{$_L['Store']}</label>
+
+        <div class="col-lg-10"><input type="text" id="store" name="store" class="form-control" value="{$d['store']}">
+
+        </div>
+    </div>
+
     <div class="form-group">
         <div class="col-lg-offset-2 col-lg-10">
 

@@ -170,6 +170,27 @@
                                     </div>
                                 </div>
 
+                                <div class="form-group"><label class="col-md-4 control-label" for="street">{$_L['Street']}</label>
+
+                                    <div class="col-lg-8"><input type="text" id="street" name="street" class="form-control">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-md-4 control-label" for="ward">{$_L['Ward']}</label>
+
+                                    <div class="col-lg-8"><input type="text" id="ward" name="ward" class="form-control">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-md-4 control-label" for="district">{$_L['District']}</label>
+
+                                    <div class="col-lg-8"><input type="text" id="district" name="district" class="form-control">
+
+                                    </div>
+                                </div>
+
 
                                 <div class="form-group"><label class="col-md-4 control-label" for="city">{$_L['City']}</label>
 
@@ -355,6 +376,33 @@
 
                                 {/if}
 
+                                <div class="form-group"><label class="col-md-4 control-label" for="transport_name">{$_L['Transport Name']}</label>
+
+                                    <div class="col-lg-8"><input type="text" id="transport_name" name="transport_name" class="form-control">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-md-4 control-label" for="transport_phone">{$_L['Transport Phone']}</label>
+
+                                    <div class="col-lg-8"><input type="text" id="transport_phone" name="transport_phone" class="form-control">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-md-4 control-label" for="transport_address">{$_L['Transport Address']}</label>
+
+                                    <div class="col-lg-8"><input type="text" id="transport_address" name="transport_address" class="form-control">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group"><label class="col-md-4 control-label" for="store">{$_L['Store']}</label>
+
+                                    <div class="col-lg-8"><input type="text" id="store" name="store" class="form-control">
+
+                                    </div>
+                                </div>
 
 
 
