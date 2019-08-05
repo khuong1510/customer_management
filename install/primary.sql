@@ -437,6 +437,10 @@ CREATE TABLE `crm_accounts` (
   `drive` varchar(50) DEFAULT NULL,
   `workspace_id` int(11) NOT NULL DEFAULT '0',
   `parent_id` int(11) NOT NULL DEFAULT '0',
+  `transport_name` varchar(200) DEFAULT NULL,
+  `transport_phone` varchar(200) DEFAULT NULL,
+  `transport_address` varchar(200) DEFAULT NULL,
+  `store` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

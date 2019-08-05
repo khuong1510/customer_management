@@ -66,6 +66,10 @@ Class Contacts
             $company = '';
             $password = '';
             $img = '';
+            $transportName = '';
+            $transportAddress = '';
+            $transportPhone = '';
+            $store = '';
 
 
             $d = ORM::for_table('crm_accounts')->create();
@@ -115,6 +119,22 @@ Class Contacts
 
             if(isset($data['country'])){
                 $country = $data['country'];
+            }
+
+            if(isset($data['transport_name'])){
+                $transportName = $data['transport_name'];
+            }
+
+            if(isset($data['transport_address'])){
+                $transportAddress = $data['transport_address'];
+            }
+
+            if(isset($data['transport_phone'])){
+                $transportPhone = $data['transport_phone'];
+            }
+
+            if(isset($data['store'])){
+                $store = $data['store'];
             }
 
 //            if(isset($data['company'])){
@@ -168,6 +188,10 @@ Class Contacts
             $d->state = $state;
             $d->country = $country;
             $d->tags = $tags;
+            $d->transport_name = $transportName;
+            $d->transport_address = $transportAddress;
+            $d->transport_phone = $transportPhone;
+            $d->store = $store;
 
             //others
             $d->fname = '';

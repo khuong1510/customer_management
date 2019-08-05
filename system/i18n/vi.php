@@ -1194,4 +1194,7 @@ $_L = [
     'Mark as Paid' => 'Mark as Paid',
     'Dashboard Widgets' => 'Dashboard Widgets',
     'Enable Signature' => 'Enable Signature',
+    'Transport Name' => 'Tên Nhà Xe',
+    'Transport Phone' => 'SĐT Nhà Xe',
+    'Transport Address' => 'Địa chỉ Nhà Xe',
 ];

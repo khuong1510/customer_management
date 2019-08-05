@@ -57,8 +57,14 @@
                                 {/if}
 
 
-                                <th>{$_L['Email']}</th>
+                                {*<th>{$_L['Email']}</th>*}
+                                <th>{$_L['Address']}</th>
+                                <th>{$_L['City']}</th>
                                 <th>{$_L['Phone']}</th>
+                                <th>{$_L['Transport Name']}</th>
+                                <th>{$_L['Transport Phone']}</th>
+                                <th>{$_L['Transport Address']}</th>
+                                <th>{$_L['Store']}</th>
                                 <th class="text-right" style="width: 80px;">{$_L['Manage']}</th>
                             </tr>
 
@@ -81,8 +87,14 @@
                                 {/if}
 
 
-                                <td><input type="email" id="filter_email" name="filter_email" class="form-control"></td>
+                                {*<td><input type="email" id="filter_email" name="filter_email" class="form-control"></td>*}
+                                <td><input type="text" id="filter_address" name="filter_address" class="form-control"></td>
+                                <td><input type="text" id="filter_city" name="filter_city" class="form-control"></td>
                                 <td><input type="text" id="filter_phone" name="filter_phone" class="form-control"></td>
+                                <td><input type="text" id="filter_transport_name" name="filter_transport_name" class="form-control"></td>
+                                <td><input type="text" id="filter_transport_phone" name="filter_transport_phone" class="form-control"></td>
+                                <td><input type="text" id="filter_transport_address" name="filter_transport_address" class="form-control"></td>
+                                <td><input type="text" id="filter_store" name="filter_store" class="form-control"></td>
                                 <td class="text-right" style="width: 80px;"><button type="submit" id="ib_filter" class="btn btn-primary">{$_L['Filter']}</button></td>
                             </tr>
                             </thead>
@@ -135,7 +147,13 @@
                     "data": function ( d ) {
 
                         d.account = $('#account').val();
-                        d.email = $('#filter_email').val();
+                        // d.email = $('#filter_email').val();
+                        d.address = $('#filter_address').val();
+                        d.city = $('#filter_city').val();
+                        d.transport_name = $('#filter_transport_name').val();
+                        d.transport_address = $('#filter_transport_address').val();
+                        d.transport_phone = $('#filter_transport_phone').val();
+                        d.store = $('#filter_store').val();
 
                         {if $show_company_column}
 
@@ -215,7 +233,8 @@
                 "columnDefs": [
                     {
                         "render": function ( data, type, row ) {
-                            return '<a href="' + base_url +'contacts/view/'+ row[9] +'">'+ data +'</a>';
+                            return '<a href="' + base_url +'contacts/view/'+ row[1] +'" id="account_val_'+ row[1] +'">'+ data +'</a>' +
+                                '<input type="hidden" name="account" class="form-control edit-inline-input" id="account_'+ row[1] +'" value="' + data +'" style="width: 100%"/>';
                         },
                         "targets": 3
                     },
@@ -236,8 +255,62 @@
 
                     {else}
 
-                    { "orderable": false, "targets": 6 },
-
+                    {
+                        "orderable": false,
+                        "targets": 4,
+                        "render": function ( data, type, row ) {
+                            return '<span id="address_val_'+ row[1] +'">' + data + '</span>' +
+                                '<input type="hidden" name="address" class="form-control edit-inline-input" id="address_'+ row[1] +'" value="' + data +'" style="width: 100%"/>';
+                        }
+                    },
+                    {
+                        "orderable": false,
+                        "targets": 5,
+                        "render": function ( data, type, row ) {
+                            return '<span id="city_val_'+ row[1] +'">' + data + '</span>' +
+                                '<input type="hidden" name="city" class="form-control edit-inline-input" id="city_'+ row[1] +'" value="' + data +'" style="width: 100%" />';
+                        }
+                    },
+                    {
+                        "orderable": false,
+                        "targets": 6,
+                        "render": function ( data, type, row ) {
+                            return '<span id="phone_val_'+ row[1] +'">' + data + '</span>' +
+                                '<input type="hidden" name="phone" class="form-control edit-inline-input" id="phone_'+ row[1] +'" value="' + data +'" style="width: 100%" />';
+                        }
+                    },
+                    {
+                        "orderable": false,
+                        "targets": 7,
+                        "render": function ( data, type, row ) {
+                            return '<span id="transport_name_val_'+ row[1] +'">' + data + '</span>' +
+                                '<input type="hidden" name="transport_name" class="form-control edit-inline-input" id="transport_name_'+ row[1] +'" value="' + data +'" style="width: 100%" />';
+                        }
+                    },
+                    {
+                        "orderable": false,
+                        "targets": 8,
+                        "render": function ( data, type, row ) {
+                            return '<span id="transport_phone_val_'+ row[1] +'">' + data + '</span>' +
+                                '<input type="hidden" name="transport_phone" class="form-control edit-inline-input" id="transport_phone_'+ row[1] +'" value="' + data +'" style="width: 100%" />';
+                        }
+                    },
+                    {
+                        "orderable": false,
+                        "targets": 9,
+                        "render": function ( data, type, row ) {
+                            return '<span id="transport_address_val_'+ row[1] +'">' + data + '</span>' +
+                                '<input type="hidden" name="transport_address" class="form-control edit-inline-input" id="transport_address_'+ row[1] +'" value="' + data +'" style="width: 100%" />';
+                        }
+                    },
+                    {
+                        "orderable": false,
+                        "targets": 10,
+                        "render": function ( data, type, row ) {
+                            return '<span id="store_val_'+ row[1] +'">' + data + '</span>' +
+                                '<input type="hidden" name="store" class="form-control edit-inline-input" id="store_'+ row[1] +'" value="' + data +'" style="width: 100%" />';
+                        }
+                    },
                     {/if}
 
 
@@ -268,7 +341,6 @@
                 ib_dt.ajax.reload(
                     function () {
                         $ib_data_panel.unblock();
-                        listen_change();
                     }
                 );
 
@@ -448,8 +520,119 @@
 
             });
 
+            // Edit inline: Show input and edit button
+            $ib_data_panel.on('click', '.ceditinline', function(e){
+                e.preventDefault();
+                var lid = this.id;
+                var id = lid.replace("eiid", "");
 
+                $('.edit-inline-input').each(function() {
+                    $(this).attr('type', 'hidden');
+                });
 
+                $('#dtr_' + id + ' .edit-inline-input').each(function() {
+                    $(this).attr('type', 'text');
+                });
+
+                // Show edit button
+                $(this).hide();
+                $('#eiokid' + id).show();
+                $('#eirmid' + id).show();
+
+                $('#account_val_' + id).hide();
+                $('#address_val_' + id).hide();
+                $('#city_val_' + id).hide();
+                $('#phone_val_' + id).hide();
+                $('#transport_name_val_' + id).hide();
+                $('#transport_phone_val_' + id).hide();
+                $('#transport_address_val_' + id).hide();
+                $('#store_val_' + id).hide();
+
+            });
+
+            // Edit inline: Hide input and edit button
+            function hideEditInlineInput(id) {
+                $('#eiid' + id).show();
+                $('#eiokid' + id).hide();
+                $('#eirmid' + id).hide();
+
+                $('#account_val_' + id).show();
+                $('#address_val_' + id).show();
+                $('#city_val_' + id).show();
+                $('#phone_val_' + id).show();
+                $('#transport_name_val_' + id).show();
+                $('#transport_phone_val_' + id).show();
+                $('#transport_address_val_' + id).show();
+                $('#store_val_' + id).show();
+
+                $('#dtr_' + id + ' .edit-inline-input').each(function() {
+                    $(this).attr('type', 'hidden');
+                });
+            }
+
+            $ib_data_panel.on('click', '.c-remove', function(e) {
+                e.preventDefault();
+                var id = this.id.replace("eirmid", "");
+
+                hideEditInlineInput(id);
+            });
+
+            // Edit inline: Send edit request
+            $ib_data_panel.on('click', '.c-ok', function(e) {
+                e.preventDefault();
+                var id = this.id.replace("eiokid", "");
+                var lid = 'eiid' + id;
+
+                var account = $('#account_' + id).val();
+                var phone = $('#phone_' + id).val();
+                var address = $('#address_' + id).val();
+                var city = $('#city_' + id).val();
+                var transportName = $('#transport_name_' + id).val();
+                var transportAddress = $('#transport_address_' + id).val();
+                var transportPhone = $('#transport_phone_' + id).val();
+                var store = $('#store_' + id).val();
+
+                $.post(
+                    base_url + "contacts/edit_inline/" + lid,
+                    {
+                        account: account,
+                        phone: phone,
+                        address: address,
+                        city: city,
+                        transport_name: transportName,
+                        transport_address: transportAddress,
+                        transport_phone: transportPhone,
+                        store: store
+                    },
+                    function( data ) {
+                        console.log(data);
+
+                        if (data.status) {
+                            $('#account_val_' + id).html(account);
+                            $('#address_val_' + id).html(address);
+                            $('#city_val_' + id).html(city);
+                            $('#phone_val_' + id).html(phone);
+                            $('#transport_name_val_' + id).html(transportName);
+                            $('#transport_phone_val_' + id).html(transportPhone);
+                            $('#transport_address_val_' + id).html(transportAddress);
+                            $('#store_val_' + id).html(store);
+
+                            toastr.success(data.message);
+                            hideEditInlineInput(id);
+
+                            // $ib_data_panel.block({ message:block_msg });
+                            // ib_dt.ajax.reload(
+                            //     function () {
+                            //         $ib_data_panel.unblock();
+                            //         listen_change();
+                            //     }
+                            // );
+                        } else {
+                            toastr.error(data.message);
+                        }
+
+                    });
+            });
 
         });
     </script>

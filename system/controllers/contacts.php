@@ -1603,8 +1603,10 @@ if($message == ''){
                 $data['state'] = $contact['State'];
                 $data['country'] = $contact['Country'];
                 $data['company'] = $contact['Company'];
-
-
+                $data['transport_name'] = $contact['Transport Name'];
+                $data['transport_phone'] = $contact['Transport Phone'];
+                $data['transport_address'] = $contact['Transport Address'];
+                $data['store'] = $contact['Store'];
 
                 $save = Contacts::add($data);
 
@@ -2833,8 +2835,14 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
             $columns[] = 'gname';
         }
 
-        $columns[] = 'email';
+//        $columns[] = 'email';
+        $columns[] = 'address';
+        $columns[] = 'city';
         $columns[] = 'phone';
+        $columns[] = 'transport_name';
+        $columns[] = 'transport_phone';
+        $columns[] = 'transport_address';
+        $columns[] = 'store';
         $columns[] = '';
 
 
@@ -2866,10 +2874,14 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
             $d->select('gname');
         }
 
-        $d->select('email');
+//        $d->select('email');
+        $d->select('address');
+        $d->select('city');
         $d->select('phone');
-
-
+        $d->select('transport_name');
+        $d->select('transport_phone');
+        $d->select('transport_address');
+        $d->select('store');
 
         $account = _post('account');
 
@@ -2880,11 +2892,59 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
         }
 
 
-        $email = _post('email');
+//        $email = _post('email');
+//
+//        if($email != ''){
+//
+//            $d->where_like('email',"%$email%");
+//
+//        }
 
-        if($email != ''){
+        $address = _post('address');
 
-            $d->where_like('email',"%$email%");
+        if($address != ''){
+
+            $d->where_like('address',"%$address%");
+
+        }
+
+        $city = _post('city');
+
+        if($city != ''){
+
+            $d->where_like('city',"%$city%");
+
+        }
+
+        $transportName = _post('transport_name');
+
+        if($transportName != ''){
+
+            $d->where_like('transport_name',"%$transportName%");
+
+        }
+
+        $transportPhone = _post('transport_phone');
+
+        if($transportPhone != ''){
+
+            $d->where_like('transport_phone',"%$transportPhone%");
+
+        }
+
+        $transportAddress = _post('transport_address');
+
+        if($transportAddress != ''){
+
+            $d->where_like('transport_address',"%$transportAddress%");
+
+        }
+
+        $store = _post('store');
+
+        if($store != ''){
+
+            $d->where_like('store',"%$store%");
 
         }
 
@@ -3043,105 +3103,123 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
                 $phone = $xs['phone'];
             }
 
-            if($xs['code'] != '')
-            {
-                $contact_details = htmlentities($xs['account']).' <br> '.$xs['code'];
+            $contact_details = htmlentities($xs['account']);
+//            if($xs['code'] != '')
+//            {
+//                $contact_details = htmlentities($xs['account']).' <br> '.$xs['code'];
+//
+//            }
+//            else{
+//                $contact_details = htmlentities($xs['account']);
+//            }
 
-            }
-            else{
-                $contact_details = htmlentities($xs['account']);
-            }
-
-            if($show_group_column && $show_company_column)
-            {
+//            if($show_group_column && $show_company_column)
+//            {
+//                $records["data"][] = [
+//                    0 => '<input id="row_'.$xs['id'].'" type="checkbox" value="" name=""  class="i-checks"/>',
+//                    1 => $xs['id'],
+//                    2 => '<a href="'.U.'contacts/view/'.$xs['id'].'">'.$img.'</a>',
+//                    3 => $contact_details,
+//                    4 => htmlentities($xs['company']),
+//                    5 => htmlentities($xs['gname']),
+////                    6 => htmlentities($xs['email']),
+//                    6 => htmlentities($xs['address']),
+//                    7 => htmlentities($xs['city']),
+//                    8 => htmlentities($xs['phone']),
+//                    9 =>  '
+//                <a href="'.U.'contacts/view/'.$xs['id'].'" class="btn btn-primary btn-xs cview" id="vid'.$xs['id'].'"><i class="fa fa-search"></i> </a>
+//                <a href="'.U.'contacts/view/'.$xs['id'].'/edit/" class="btn btn-warning btn-xs cedit" id="eid'.$xs['id'].'"><i class="glyphicon glyphicon-pencil"></i> </a>
+//                <a href="#" class="btn btn-danger btn-xs cdelete" id="uid'.$xs['id'].'"><i class="fa fa-trash"></i> </a>
+//                <a href="#" class="btn btn-info btn-xs ceditinline" id="eiid'.$xs['id'].'"><i class="glyphicon glyphicon-edit"></i> </a>
+//                <a href="#" class="btn btn-success btn-xs c-ok" style="display: none" id="eiokid'.$xs['id'].'"><i class="glyphicon glyphicon-ok"></i></a>
+//                <a href="#" class="btn btn-danger btn-xs c-remove" style="display: none" id="eirmid'.$xs['id'].'"><i class="glyphicon glyphicon-remove"></i></a>
+//                ',
+//
+//                    10 => $xs['id'],
+//
+//                    "DT_RowId" => 'dtr_'.$xs['id']
+//                ];
+//            }
+//            elseif ($show_company_column == false && $show_group_column == true)
+//            {
+//                $records["data"][] = [
+//                    0 => '<input id="row_'.$xs['id'].'" type="checkbox" value="" name=""  class="i-checks"/>',
+//                    1 => $xs['id'],
+//                    2 => '<a href="'.U.'contacts/view/'.$xs['id'].'">'.$img.'</a>',
+//                    3 => $contact_details,
+//                    4 => htmlentities($xs['gname']),
+////                    5 => htmlentities($xs['email']),
+//                    5 => htmlentities($xs['address']),
+//                    6 => htmlentities($xs['city']),
+//                    7 => htmlentities($xs['phone']),
+//                    8 =>  '
+//                <a href="'.U.'contacts/view/'.$xs['id'].'" class="btn btn-primary btn-xs cview" id="vid'.$xs['id'].'"><i class="fa fa-search"></i> </a>
+//                <a href="'.U.'contacts/view/'.$xs['id'].'/edit/" class="btn btn-warning btn-xs cedit" id="eid'.$xs['id'].'"><i class="glyphicon glyphicon-pencil"></i> </a>
+//                <a href="#" class="btn btn-danger btn-xs cdelete" id="uid'.$xs['id'].'"><i class="fa fa-trash"></i> </a>
+//                <a href="#" class="btn btn-info btn-xs ceditinline" id="eiid'.$xs['id'].'"><i class="glyphicon glyphicon-edit"></i> </a>
+//                <a href="#" class="btn btn-success btn-xs c-ok" style="display: none" id="eiokid'.$xs['id'].'"><i class="glyphicon glyphicon-ok"></i></a>
+//                <a href="#" class="btn btn-danger btn-xs c-remove" style="display: none" id="eirmid'.$xs['id'].'"><i class="glyphicon glyphicon-remove"></i></a>
+//                ',
+//
+//                    9 => $xs['id'],
+//
+//                    "DT_RowId" => 'dtr_'.$xs['id']
+//                ];
+//            }
+//            elseif ($show_company_column == true && $show_group_column == false)
+//            {
+//                $records["data"][] = [
+//                    0 => '<input id="row_'.$xs['id'].'" type="checkbox" value="" name=""  class="i-checks"/>',
+//                    1 => $xs['id'],
+//                    2 => '<a href="'.U.'contacts/view/'.$xs['id'].'">'.$img.'</a>',
+//                    3 => $contact_details,
+//                    4 => htmlentities($xs['company']),
+////                    5 => htmlentities($xs['email']),
+//                    5 => htmlentities($xs['address']),
+//                    6 => htmlentities($xs['city']),
+//                    7 => htmlentities($xs['phone']),
+//                    8 =>  '
+//                <a href="'.U.'contacts/view/'.$xs['id'].'" class="btn btn-primary btn-xs cview" id="vid'.$xs['id'].'"><i class="fa fa-search"></i> </a>
+//                <a href="'.U.'contacts/view/'.$xs['id'].'/edit/" class="btn btn-warning btn-xs cedit" id="eid'.$xs['id'].'"><i class="glyphicon glyphicon-pencil"></i> </a>
+//                <a href="#" class="btn btn-danger btn-xs cdelete" id="uid'.$xs['id'].'"><i class="fa fa-trash"></i> </a>
+//                <a href="#" class="btn btn-info btn-xs ceditinline" id="eiid'.$xs['id'].'"><i class="glyphicon glyphicon-edit"></i> </a>
+//                <a href="#" class="btn btn-success btn-xs c-ok" style="display: none" id="eiokid'.$xs['id'].'"><i class="glyphicon glyphicon-ok"></i></a>
+//                <a href="#" class="btn btn-danger btn-xs c-remove" style="display: none" id="eirmid'.$xs['id'].'"><i class="glyphicon glyphicon-remove"></i></a>
+//                ',
+//
+//                    9 => $xs['id'],
+//
+//                    "DT_RowId" => 'dtr_'.$xs['id']
+//                ];
+//            }
+//            else{
                 $records["data"][] = [
                     0 => '<input id="row_'.$xs['id'].'" type="checkbox" value="" name=""  class="i-checks"/>',
                     1 => $xs['id'],
                     2 => '<a href="'.U.'contacts/view/'.$xs['id'].'">'.$img.'</a>',
                     3 => $contact_details,
-                    4 => htmlentities($xs['company']),
-                    5 => htmlentities($xs['gname']),
-                    6 => htmlentities($xs['email']),
-                    7 => htmlentities($xs['phone']),
-                    8 =>  '
-                <a href="'.U.'contacts/view/'.$xs['id'].'" class="btn btn-primary btn-xs cview" id="vid'.$xs['id'].'"><i class="fa fa-search"></i> </a>
-                <a href="'.U.'contacts/view/'.$xs['id'].'/edit/" class="btn btn-warning btn-xs cedit" id="eid'.$xs['id'].'"><i class="glyphicon glyphicon-pencil"></i> </a>
-                <a href="#" class="btn btn-danger btn-xs cdelete" id="uid'.$xs['id'].'"><i class="fa fa-trash"></i> </a>
-                ',
-
-                    9 => $xs['id'],
-
-                    "DT_RowId" => 'dtr_'.$xs['id']
-                ];
-            }
-            elseif ($show_company_column == false && $show_group_column == true)
-            {
-                $records["data"][] = [
-                    0 => '<input id="row_'.$xs['id'].'" type="checkbox" value="" name=""  class="i-checks"/>',
-                    1 => $xs['id'],
-                    2 => '<a href="'.U.'contacts/view/'.$xs['id'].'">'.$img.'</a>',
-                    3 => $contact_details,
-                    4 => htmlentities($xs['gname']),
-                    5 => htmlentities($xs['email']),
+//                    4 => htmlentities($xs['email']),
+                    4 => htmlentities($xs['address']),
+                    5 => htmlentities($xs['city']),
                     6 => htmlentities($xs['phone']),
-                    7 =>  '
+                    7 => htmlentities($xs['transport_name']),
+                    8 => htmlentities($xs['transport_phone']),
+                    9 => htmlentities($xs['transport_address']),
+                    10 => htmlentities($xs['store']),
+                    11 =>  '
                 <a href="'.U.'contacts/view/'.$xs['id'].'" class="btn btn-primary btn-xs cview" id="vid'.$xs['id'].'"><i class="fa fa-search"></i> </a>
                 <a href="'.U.'contacts/view/'.$xs['id'].'/edit/" class="btn btn-warning btn-xs cedit" id="eid'.$xs['id'].'"><i class="glyphicon glyphicon-pencil"></i> </a>
                 <a href="#" class="btn btn-danger btn-xs cdelete" id="uid'.$xs['id'].'"><i class="fa fa-trash"></i> </a>
+                <a href="#" class="btn btn-info btn-xs ceditinline" id="eiid'.$xs['id'].'"><i class="glyphicon glyphicon-edit"></i> </a>
+                <a href="#" class="btn btn-success btn-xs c-ok" style="display: none" id="eiokid'.$xs['id'].'"><i class="glyphicon glyphicon-ok"></i></a>
+                <a href="#" class="btn btn-danger btn-xs c-remove" style="display: none" id="eirmid'.$xs['id'].'"><i class="glyphicon glyphicon-remove"></i></a>
                 ',
 
-                    9 => $xs['id'],
+                    12 => $xs['id'],
 
                     "DT_RowId" => 'dtr_'.$xs['id']
                 ];
-            }
-            elseif ($show_company_column == true && $show_group_column == false)
-            {
-                $records["data"][] = [
-                    0 => '<input id="row_'.$xs['id'].'" type="checkbox" value="" name=""  class="i-checks"/>',
-                    1 => $xs['id'],
-                    2 => '<a href="'.U.'contacts/view/'.$xs['id'].'">'.$img.'</a>',
-                    3 => $contact_details,
-                    4 => htmlentities($xs['company']),
-                    5 => htmlentities($xs['email']),
-                    6 => htmlentities($xs['phone']),
-                    7 =>  '
-                <a href="'.U.'contacts/view/'.$xs['id'].'" class="btn btn-primary btn-xs cview" id="vid'.$xs['id'].'"><i class="fa fa-search"></i> </a>
-                <a href="'.U.'contacts/view/'.$xs['id'].'/edit/" class="btn btn-warning btn-xs cedit" id="eid'.$xs['id'].'"><i class="glyphicon glyphicon-pencil"></i> </a>
-                <a href="#" class="btn btn-danger btn-xs cdelete" id="uid'.$xs['id'].'"><i class="fa fa-trash"></i> </a>
-                ',
-
-                    9 => $xs['id'],
-
-                    "DT_RowId" => 'dtr_'.$xs['id']
-                ];
-            }
-            else{
-                $records["data"][] = [
-                    0 => '<input id="row_'.$xs['id'].'" type="checkbox" value="" name=""  class="i-checks"/>',
-                    1 => $xs['id'],
-                    2 => '<a href="'.U.'contacts/view/'.$xs['id'].'">'.$img.'</a>',
-                    3 => $contact_details,
-                    4 => htmlentities($xs['email']),
-                    5 => htmlentities($xs['phone']),
-                    6 =>  '
-                <a href="'.U.'contacts/view/'.$xs['id'].'" class="btn btn-primary btn-xs cview" id="vid'.$xs['id'].'"><i class="fa fa-search"></i> </a>
-                <a href="'.U.'contacts/view/'.$xs['id'].'/edit/" class="btn btn-warning btn-xs cedit" id="eid'.$xs['id'].'"><i class="glyphicon glyphicon-pencil"></i> </a>
-                <a href="#" class="btn btn-danger btn-xs cdelete" id="uid'.$xs['id'].'"><i class="fa fa-trash"></i> </a>
-                ',
-
-                    9 => $xs['id'],
-
-                    "DT_RowId" => 'dtr_'.$xs['id']
-                ];
-            }
-
-
-
-
-
-
-
+//            }
 
         }
 
@@ -3154,15 +3232,87 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
 
 
 
-       // var_dump($records);
+//        var_dump($records);
 
-     //   exit;
+//        exit;
 
         api_response($records);
 
 
 
 
+
+        break;
+
+    case 'edit_inline':
+        if(!has_access($user->roleid,'customers','edit')) {
+            permissionDenied();
+        }
+
+        $id = $routes['2'];
+        $id = str_replace('eiid', '', $id);
+
+        $d = ORM::for_table('crm_accounts')->find_one($id);
+        if($d) {
+            $result = [
+                'status' => false
+            ];
+            $msg = '';
+
+            $account = _post('account');
+            $phone = _post('phone');
+            $address = _post('address');
+            $city = _post('city');
+            $transportName = _post('transport_name');
+            $transportPhone = _post('transport_phone');
+            $transportAddress = _post('transport_address');
+            $store = _post('store');
+
+//            if($address == ''){
+//                $msg .= 'Address is required <br>';
+//            }
+//            if($city == ''){
+//                $msg .= 'City is required <br>';
+//            }
+            if($account == ''){
+                $msg .= 'Name is required <br>';
+            }
+
+            if($phone != '') {
+                if(!is_numeric($phone)) {
+                    $msg .= $_L['Invalid Phone'].' <br>';
+                }
+            }
+
+            if($transportPhone != '') {
+                if(!is_numeric($transportPhone)) {
+                    $msg .= $_L['Invalid Transport Phone'].' <br>';
+                }
+            }
+
+            if($msg == '') {
+                $d->account = $account;
+                $d->phone = $phone;
+                $d->address = $address;
+                $d->city = $city;
+                $d->transport_name = $transportName;
+                $d->transport_phone = $transportPhone;
+                $d->transport_address = $transportAddress;
+                $d->store = $store;
+
+                $d->save();
+
+                _msglog('s', $_L['account_updated_successfully']);
+
+                $result['message'] = $_L['account_updated_successfully'];
+                $result['status'] = true;
+            }
+            else{
+                $result['message'] = $msg;
+            }
+
+            api_response($result);
+        }
 
         break;
 
