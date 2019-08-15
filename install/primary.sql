@@ -359,6 +359,9 @@ CREATE TABLE `crm_accounts` (
   `email` varchar(100) DEFAULT NULL,
   `username` varchar(100) DEFAULT NULL,
   `address` varchar(200) DEFAULT NULL,
+  `street` varchar(100) DEFAULT NULL,
+  `ward` varchar(100) DEFAULT NULL,
+  `district` varchar(100) DEFAULT NULL,
   `city` varchar(100) DEFAULT NULL,
   `state` varchar(100) DEFAULT NULL,
   `zip` varchar(100) DEFAULT NULL,
@@ -437,6 +440,10 @@ CREATE TABLE `crm_accounts` (
   `drive` varchar(50) DEFAULT NULL,
   `workspace_id` int(11) NOT NULL DEFAULT '0',
   `parent_id` int(11) NOT NULL DEFAULT '0',
+  `transport_name` varchar(200) DEFAULT NULL,
+  `transport_phone` varchar(200) DEFAULT NULL,
+  `transport_address` varchar(200) DEFAULT NULL,
+  `store` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -2781,6 +2788,31 @@ VALUES
 /*!40000 ALTER TABLE `sys_users` ENABLE KEYS */;
 UNLOCK TABLES;
 
+# Dump of table tree
+# ------------------------------------------------------------
+
+CREATE TABLE `tree` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(200) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+# Dump of table tree mapping
+# ------------------------------------------------------------
+
+CREATE TABLE `tree_mapping` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `account_id` int(11) NOT NULL,
+  `tree_id` int(11) DEFAULT NULL,
+  `area` varchar(100) NOT NULL DEFAULT '0',
+  `age` varchar(100) NOT NULL DEFAULT '0',
+  `amount` varchar(100) NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

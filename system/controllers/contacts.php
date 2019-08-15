@@ -30,6 +30,104 @@ _L[\'Submit\'] = \''.$_L['Submit'].'\';
 
 
 switch ($action) {
+    case 'farmer':
+        $KoolControlsFolder = "vendor/KoolPHPSuite/KoolControls";//Relative path to "KoolPHPSuite/KoolControls" folder
+
+        require($KoolControlsFolder."/KoolAjax/koolajax.php");
+        $koolajax->scriptFolder = $KoolControlsFolder."/KoolAjax";
+
+        require($KoolControlsFolder."/KoolGrid/koolgrid.php");
+        require($KoolControlsFolder."/KoolGrid/ext/datasources/MySQLiDataSource.php");
+        require($KoolControlsFolder."/KoolCalendar/koolcalendar.php");
+
+
+        $db_con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        mysqli_set_charset($db_con, 'utf8');
+        
+        $ds = new MySQLiDataSource($db_con);
+        $ds->SelectCommand = "select id,account,phone,street,ward,district,city from crm_accounts";
+        $ds->UpdateCommand = "update crm_accounts set account='@account', phone='@phone', street='@street', ward='@ward', district ='@district', city='@city' where id = @id";
+        $ds->DeleteCommand = "delete from crm_accounts where id=@id";
+        $ds->InsertCommand = "insert into crm_accounts (account,phone,street,ward,district,city) values ('@account','@phone','@street','@ward','@district','@city');";
+
+        $grid = new KoolGrid("grid");
+        $grid->AjaxEnabled = true;
+        $grid->DataSource = $ds;
+        $grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
+//        $grid->Width = "100%";
+        $grid->ColumnWrap = true;
+        $grid->AllowEditing = true;
+        $grid->AllowDeleting = true;
+        $grid->AllowInserting = true;
+        $grid->AllowFiltering = true;
+        $grid->FilterOptions  = array("Contain");
+        $grid->AllowSorting = true;
+        $grid->AllowHovering = true;
+        $grid->AllowSelecting = true;
+        $grid->PageSize = 20;
+        $grid->AllowScrolling = true;
+        $grid->styleFolder = "sunset";
+
+        $column = new GridBoundColumn();
+        $column->DataField = "id";
+        $column->HeaderText = "ID";
+        $column->ReadOnly = true;
+        $grid->MasterTable->AddColumn($column);
+
+//        $column = new GridDateTimeColumn();
+        $column = new GridTextAreaColumn();
+        $column->DataField = "account";
+        $column->HeaderText = "Full Name";
+        $grid->MasterTable->AddColumn($column);
+
+        $column = new GridTextAreaColumn();
+        $column->DataField = "phone";
+        $column->HeaderText = "Phone";
+        $grid->MasterTable->AddColumn($column);
+
+        $column = new GridTextAreaColumn();
+        $column->DataField = "street";
+        $column->HeaderText = "Street";
+        $grid->MasterTable->AddColumn($column);
+
+        $column = new GridTextAreaColumn();
+        $column->DataField = "ward";
+        $column->HeaderText = "Ward";
+        $grid->MasterTable->AddColumn($column);
+
+        $column = new GridTextAreaColumn();
+        $column->DataField = "district";
+        $column->HeaderText = "District";
+        $grid->MasterTable->AddColumn($column);
+
+        $column = new GridTextAreaColumn();
+        $column->DataField = "city";
+        $column->HeaderText = "City";
+        $grid->MasterTable->AddColumn($column);
+
+
+        $column = new GridEditDeleteColumn();
+        $column->Align = "center";
+        $column->HeaderText = "Action";
+        $grid->MasterTable->AddColumn($column);
+
+        $grid->MasterTable->EditSettings->Mode = "Inline";
+
+        //Show Function Panel
+        $grid->MasterTable->ShowFunctionPanel = true;
+        //Insert Settings
+        $grid->MasterTable->InsertSettings->Mode = "Form";
+        $grid->MasterTable->InsertSettings->ColumnNumber = 2;
+
+        $grid->Process();
+
+        mysqli_close($db_con);
+
+        view('koolphp',[
+            'koolajax' => $koolajax->Render(),
+            'grid' => $grid->Render()
+        ]);
+        break;
     case 'add':
 
         Event::trigger('contacts/add/');
