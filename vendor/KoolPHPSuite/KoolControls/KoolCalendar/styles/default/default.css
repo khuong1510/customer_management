@@ -227,8 +227,8 @@
 
 .defaultKCD .kcdToday
 {
-	background:#FFFFFF none repeat scroll 0 0;
-	border-color:#BDAB92;
+	background:#D3DBE9 none repeat scroll 0 0;
+	border-color:#D3DBE9;
 }
 
 
@@ -424,11 +424,13 @@
 
 .defaultKCD .ktmTable .ktmHeader
 {
-	background:#B25327 url(sprite.gif) repeat-x scroll 0 -500px;
-	border-color:#B1572D;
+	/* background:#B25327 url(sprite.gif) repeat-x scroll 0 -500px; */
+	/* border-color:#B1572D; */
+  background: #D3DBE9 url(sprite.gif) repeat-x scroll 0 -200px;
+	border:1px solid #9EB6CE;
 	border-style:none none solid;
 	border-width:0 0 1px;
-	color:#FFFFFF;
+	/* color:#FFFFFF; */
 	cursor:default;
 	font-family:arial,tahoma,sans-serif;
 	font-size:13px;
@@ -474,8 +476,10 @@
 
 .defaultKCD .ktmTable .ktmOver a
 {
-	background:#FFA630 url(sprite.gif) repeat-x scroll 0 -600px;
-	border:1px solid #DE9700;
+	/* background:#FFA630 url(sprite.gif) repeat-x scroll 0 -600px; */
+	/* border:1px solid #DE9700; */
+	background: #D3DBE9 url(sprite.gif) repeat-x scroll 0 -600px;
+	border:1px solid #9EB6CE;
 	padding:4px 6px;
 }
 

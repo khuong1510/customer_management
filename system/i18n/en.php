@@ -1196,4 +1196,5 @@ $_L = [
     'Mark as Paid' => 'Mark as Paid',
     'Dashboard Widgets' => 'Dashboard Widgets',
     'Enable Signature' => 'Enable Signature',
+    'List Trees' => 'List Trees'
 ];

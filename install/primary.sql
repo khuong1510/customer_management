@@ -2805,7 +2805,7 @@ CREATE TABLE `tree` (
 CREATE TABLE `tree_mapping` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `account_id` int(11) NOT NULL,
-  `tree_id` int(11) DEFAULT NULL,
+  `tree_id` varchar(200) DEFAULT NULL,
   `area` varchar(100) NOT NULL DEFAULT '0',
   `age` varchar(100) NOT NULL DEFAULT '0',
   `amount` varchar(100) NOT NULL DEFAULT '0',

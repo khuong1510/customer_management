@@ -14,10 +14,10 @@
 	require $KoolControlsFolder."/KoolGrid/ext/datasources/MySQLiDataSource.php";
 		
 	$ds = new MySQLiDataSource($db_con);//This $db_con link has been created inside KoolPHPSuite/Resources/runexample.php
-	$ds->SelectCommand = "select id as pk, account,email,phone from crm_accounts";
-	$ds->UpdateCommand = "update crm_accounts set account=@account, email='@email', phone='@phone' where id=@pk";
-	$ds->DeleteCommand = "delete from crm_accounts where id=@pk";
-	$ds->InsertCommand = "insert into crm_accounts (id,account,phone,email) values (@id,'@account','@phone','@email');";
+	$ds->SelectCommand = "select customerNumber as pk, customerNumber,customerName,phone,city from customers";
+	$ds->UpdateCommand = "update customers set customerNumber=@customerNumber, customerName='@customerName', phone='@phone', city='@city' where customerNumber=@pk";
+	$ds->DeleteCommand = "delete from customers where customerNumber=@pk";
+	$ds->InsertCommand = "insert into customers (customerNumber,customerName,phone,city) values (@customerNumber,'@customerName','@phone','@city');";
 
 	$grid = new KoolGrid("grid");
 	$grid->scriptFolder = $KoolControlsFolder."/KoolGrid";

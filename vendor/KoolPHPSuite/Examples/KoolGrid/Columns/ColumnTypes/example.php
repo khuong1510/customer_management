@@ -31,12 +31,15 @@
 	$grid->ColumnWrap = true;
 	$grid->AllowEditing = true;
 	$grid->AllowDeleting = true;
-    $grid->MasterTable->EditSettings->Mode = "form";
+  $grid->MasterTable->EditSettings->Mode = "form";
+  $grid->ShowFooter = true;
 	
 	$column = new GridBoundColumn();
 	$column->DataField = "orderNumber";
-    $column->HeaderText = "Order number";
+  $column->HeaderText = "Order number";
 	$column->ReadOnly = true;
+  $column->FooterText = "Total Sum: ";
+	$column->Aggregate = "Sum";
 	$grid->MasterTable->AddColumn($column);
 
 	$column = new GridDateTimeColumn();

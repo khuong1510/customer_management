@@ -2,6 +2,6 @@
 $dbhost = "localhost"; 
 $dbuser = "root"; 
 $dbpass = ""; 
-$dbname = "test_admin"; 
+$dbname = "koolphp_dong"; 
 @define('INSTALLED', true); 
 ?>

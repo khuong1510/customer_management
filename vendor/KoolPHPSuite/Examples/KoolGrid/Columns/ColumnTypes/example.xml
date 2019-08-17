@@ -55,15 +55,17 @@ Beside most-used columns which are provided, you can write your own column type 
 	$grid->ColumnWrap = true;
 	$grid->AllowEditing = true;
 	$grid->AllowDeleting = true;
-	$grid->MasterTable->EditSettings->Mode = "form";
-
+  $grid->MasterTable->EditSettings->Mode = "form";
+  $grid->ShowFooter = true;
+	
 	$column = new GridBoundColumn();
 	$column->DataField = "orderNumber";
-    $column->HeaderText = "Order number";
+  $column->HeaderText = "Order number";
 	$column->ReadOnly = true;
+  $column->FooterText = "Total Sum: ";
+	$column->Aggregate = "Sum";
 	$grid->MasterTable->AddColumn($column);
 
-	
 	$column = new GridDateTimeColumn();
 	$column->DataField = "orderDate";
 	$column->HeaderText = "Order date";
@@ -74,7 +76,6 @@ Beside most-used columns which are provided, you can write your own column type 
 	$column->Picker->scriptFolder = $KoolControlsFolder."/KoolCalendar";
 	$column->Picker->styleFolder = "sunset";	
 	$column->Picker->DateFormat = "M d, Y";
-	
 	$grid->MasterTable->AddColumn($column);
 
 	$column = new GridDropDownColumn();
@@ -108,6 +109,7 @@ Beside most-used columns which are provided, you can write your own column type 
 	<div style="margin-top:10px;"><i>* <u>Note</u>:</i>Generate your own grid with <a style="color:#B8305E;" target="_blank" href="http://codegen.koolphp.net/grid/">Code Generator</a></div>
 	
 </form>
+
 
 			]]>			
 		</code>			
