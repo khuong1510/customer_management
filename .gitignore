@@ -1,4 +1,5 @@
 system/config.php
 *.gitignore
-storage/**
+storage/compiled/**
+storage/temp/**
 .idea/**

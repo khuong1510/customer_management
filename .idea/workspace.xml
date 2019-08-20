@@ -3,10 +3,277 @@
   <component name="ChangeListManager">
     <list default="true" id="83312d4d-2e95-46c6-8c61-9617a99cbf6b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/system/controllers/contacts.php" afterPath="$PROJECT_DIR$/system/controllers/contacts.php" />
-      <change beforePath="$PROJECT_DIR$/system/i18n/en.php" afterPath="$PROJECT_DIR$/system/i18n/en.php" />
-      <change beforePath="$PROJECT_DIR$/system/i18n/vi.php" afterPath="$PROJECT_DIR$/system/i18n/vi.php" />
-      <change beforePath="$PROJECT_DIR$/system/models/KoolPHP.php" afterPath="$PROJECT_DIR$/system/models/KoolPHP.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/00509e07b074514b55808a78b8d976a39d2366eb_0.file.admin_plan.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/018319cad64cdc21fbbc8070fdd4e6c3b6f93717_0.file.util-activity.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/038a66adf02567bb565329109b859183dc97e1bf_0.file.calendar.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/03951018c758beb5736bfb0f09399ab5d560dc71_0.file.edit_invoice_v2.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/05e04ccd235e700bf2d056690b906c46aafeddae_0.file.transactions_bills.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/0615c6cc5622c2ff0515fdcb93db6a99a3795b1f_0.file.dbstatus.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/075a5509be8cc6b54336ca0c60b5a1a0c34969f5_0.file.admin.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/078c0639fc2ae2e3be179111c50cea7aa97c260a_0.file.client_end_users.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/07e532200d06ae761817294952b538262fbfe394_0.file.tickets_admin_view.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/08b67eb413ecb788732dd7143b47c7eaedbb9d17_0.file.expense-categories.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/095288baad92a527fe22fb346334a8f3950976e7_0.file.documents.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/09c73f0d874a3a8c44a285c6f644759b2559c704_0.file.brands.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/09eceed095e4ec6c5bafaa1b2af3b915f6d032aa_0.file.modal_add_partner.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/0ab798ed67433b67a4d0cfab8ddb0141ad319f2e_0.file.invoice.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/0b39926c11d05859b627a960537bd4c04212dae3_0.file.asset.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/0bab0a89b4f4332a0a9f0c677ad2b3b6c3d12389_0.file.client_auth.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/0d7f802ed06d22da6f9388282519704db40b1395_0.file.predefined_reply_edit.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/0e2170c24242061e729aefd667b5d3bee7e304f1_0.file.util_tools.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/0e2596d67a35bf52b8f57bc27257f67f0ce0bbde_0.file.orders_list.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/0f2b9218e445fb46002c4d8bed44fc9b2466b6a6_0.file.admin_end_user.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/10066f5750dd2d63db819dffc5f1532e7f728580_0.file.ajax.contact-edit.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/11492ad9bbf68634af09cc41f2414ad337e9bc50_0.file.x_customers.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/117643940ddb5fd933da0241c0fd72a478a8ecd5_0.file.ajax.contact-transactions.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/11a3782b0167eb90b1b2bdfffa3856361c7bdaa0_0.file.plugin-activity.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/11bec7a76d9b2ecdb4e88abfc2e3ea665e35b825_0.file.modal_sms_invoice.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/12fa3f00f5e77fdbbc23272955242a62e5e3e07a_0.file.util-sent-emails.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/13055067250d552ff8aab8363c081a8494bd7948_0.file.admin_automation.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/1396764a61a906d84b36e9d6b0bdfce77838c243_0.file.client_modal_view_item.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/13a40e228e4f4735bcdaf6443ebdde7629f13b37_0.file.dashboard.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/1544af1627dd4b36b45dd7ce96b3a57e5fd9635a_0.file.client_tickets_new.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/1692521332fd03c6b20272a5c5023e3f1e9b3136_0.file.modal_add_contact.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/18d40d762f76321cb186b457a5c0f4ab4d8191ff_0.file.sms_send.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/18ef387dba720159d3669f49e5ada9e11359cfe2_0.file.transactions_uncleared.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/197487520200a4fafd52aaf6ac4e6b3453ff9fac_0.file.settings_units.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/1acdd4014010f92184a547ca2fe144f2d55c39d1_0.file.ajax.contact-more.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/1bffedfafde828275099551996df88bc1a47dabc_0.file.leads.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/1ce4bfe45f5ae3020bef1d29f68c1f323348259e_0.file.employee.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/1ce86c8f11683c9ec13418fc07fd2999b52f5d6c_0.file.reports_tax.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/1e27a37e2b06baf316c08fcd979a85ccdd145c21_0.file.pl-list.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/1e42773c06d80b07108a490c59c3a118b3afb1be_0.file.ps-list.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/1f9ff7e6b48d14df3e1b87f983806b837de048db_0.file.quote.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/1fd1ab220c2b9bcc8de171a584d9c893c7e89103_0.file.sales_delivery_note.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/21ba03999a581e5b47aa88af10846fad6b857411_0.file.automation.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/220c0a79aaf132d80e66ebc47ce4cd9915b1593a_0.file.ajax.contact-activity.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/250d986c4409f55d9ea718f2d8fe4a5bc8656ecb_0.file.app_wrapper.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/2646b45fbeec47ebcb8ed73429a4be4753592ac9_0.file.admin_services.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/26b9902b9b8bea984fc0309b0b2cf01da4eef3bc_0.file.ajax.contact-transactions.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/26c24c41b47aaa16a1699fd9d06a04b7f5761860_0.file.dashboard.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/294c8dfeeb35ea7eaba2ae0eaca73c98648be263_0.file.transactions_deposit.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/2a4c37f2ef48fc3317456ea98bfbbd02004650bb_0.file.content_only.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/2a5bc24181b96e6c550a22f33dc453cd6a955362_0.file.transactions_list.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/2d5b970bde92ade89c86274650e5664d8550334c_0.file.sms_sent.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/2df3ee90124e89a95fc70c0d35792edf9eb44f59_0.file.appearance_themes.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/2e40882bed45178924f4898bfed654b727cad152_0.file.settings_add_role.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/2f8c723e9c8c75f75a50aaca726cdc1803030bc5_0.file.client_ajax_shopping_cart.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/3004c17bfd87b40f879899092f4b0ded4f158eb7_0.file.ajax.contact-summary.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/31d753f6ad2d601732b7f60da2428ce31c50ff49_0.file.admin_end_users.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/33c8d58c3b69b2407d97465a9c2681996c057d3a_0.file.auth.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/3448322dfceba8f105186d2e7dac033f0fe135ba_0.file.employee.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/34f6de0763035b3140c62505184b2d5a63125d36_0.file.accounts-manage.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/3704c0390537c736ad285b8f92bb5b70f8894370_0.file.auth.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/371d4a553ba094e832a8873b6374a2622814f8de_0.file.dashboard_canvas.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/372cb2d9b85b72c4afe4c38f7e4433bdf9162720_0.file.hostbilling.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/37317c789d2ff809d8c96048c2af206f739001dd_0.file.cart_view.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/381f2d20b32ba164499e8928b135f27c52ce41f0_0.file.transactions_expense.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/387f744b8379150481691cc47951ad400ab5f52c_0.file.client-quote.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/3a8e13d4aa52200159b29c13e9b6fa84f8dd8069_0.file.client_tickets.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/3c54308dbe68244d77d2abcce875d5cc01e92522_0.file.admin_whois_lookup.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/3d79a7a25728fac4ddabba5b773ae62ee4eee681_0.file.companies.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/3db78533774bea5c7e1f92b8c195c5524ab2e375_0.file.sms_templates.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/3dc6547e1563b2b5da996a2703c0e152c9b97785_0.file.reports_expense.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/3ec6b66974cf0a5b4240cf7c102dc73d028fb021_0.file.purchase_list.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/3efc166171e2a7426a192085a36c87d39ae4ee8c_0.file.util_sys_status.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/3f10e0e0dea9066a922c6c39ca916f76a503615a_0.file.cart_item.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/3f901411dc10652d2f6dfbc1d24aa7199cb8550a_0.file.modal_task_view.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/3f9bdcf1b166ed4fbda4e23f7205667cb4173826_0.file.reports_sales.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/43044fbcf86bff69beb0a6cad3b55ae5d82f2a69_0.file.password_manager.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/43f10e3dcd2363cf623c3bc33b03dbe10065d067_0.file.admin_orders.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/45ab09e18e9b92c5a23cdf1a517df55d6cc46806_0.file.users-edit.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/4655faaf2576acc88f29460a6a9448e954057417_0.file.matter.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/4700e235df7b09bb06de4d537922c32a25580755_0.file.practice.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/47717f7e17473f7a352ad1a85278f9948d2843f6_0.file.transactions_deposit.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/48a4c5918ef386ebdbc5c81b5b04fdcee1c9c53a_0.file.calendar.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/48ccc01050987a202816ccdbf3491745ad77a887_0.file.users-add.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/48e225ac057f162db04ffdaf330db50296ed86f4_0.file.contacts_add.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/4a7d29bc9e5c41e66ab2fc9517b99ef809d1451e_0.file.add-ps.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/4b0e4f9a68c626711740ae817cf136734d324ba4_0.file.invoice.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/4b34e599940041d0b1db9be02e1b9d47408ddad8_0.file.admin_end_users.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/4bc5472cfcbc5fdeae449e4f9fe2b1eefcbfbaf5_0.file.reports-income-vs-expense.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/4c76c9b40bf59977d889b691de831fda40cc50dd_0.file.appearance_customize.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/4cc315406520128b16b263b194e118f7ee91518b_0.file.ajax.contact-activity.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/4fa4073e4ca9506a35d0e46583be4e3bd4dc2533_0.file.sms_template_edit.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/4ff5bcf54e314dba7931d4ed04d305c7b30c3dbc_0.file.add_invoice_v2.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/513340543ed78bcb9cdfc88f8d293949e7ce3d1b_0.file.pg-conf.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/521e50bf7cefef2e63188a26d482f17a40dad68c_0.file.list.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/52415046252933e6c9f294cd618305afa6e3f073_0.file.kb_edit.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/542572258fba1c159f5e9183020a46d6510dc41c_0.file.account-profile-alt.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/54ca29ae6fcc210325c46ea666c9bb3ccb3771ca_0.file.paper.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/57bd058bf0b5726e011d15fbf1f43336c62c7fc0_0.file.customers.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/5988a839b0567cc5370b28291777318c73c1d2b8_0.file.client.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/59dd33022ec0ba8cc0af0e8c96c446956a6920c1_0.file.tickets_departments.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/59f0d1c0f6757d9c23c269e4202b1bc3d9eb396d_0.file.employee_attendance.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/5a0332928f8377d1de055427105bdaa0997a8b17_0.file.sales_delivery_notes.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/5ac5c9d28b7f24b8c0fa7adb861cdbbf16c99175_0.file.client_profile.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/5b8d9a8006c41e7c74301c3a2ec333ca05d03995_0.file.simple_layout.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/5ba0e88a4707969dabfebcc4e915037361857b35_0.file.tickets_admin_create.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/5bd0917733341411d3058ff71d1ce3e2bbfeb0b7_0.file.client_transactions.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/5c8fbd20e295c657aa6fd5edf562438765fcc6c0_0.file.add.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/5cacd2a4f88921fa64fc46d82009467e7b56b315_0.file.reports_purchases.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/5cb51f08711a0d8033478a11d07be0ae21115dff_0.file.client_tickets_all.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/5ccaea2c5fbf5cb7837616cc5609ca206a1886dc_0.file.invoices_list.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/5d8ced03ec1364779101762e3ee032046dbf95a9_0.file.list-tax.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/5e26538f6f541a6058cd08ce9604b27ef5ad7e15_0.file.login.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/5eebca1c14dc253f663167d7a2ead8ef96950b02_0.file.employee_list.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/5f0971b6279cd41c4190c234d363e9dce78872c6_0.file.client_end_users.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/62ec3d12057ee1b88523d5339a63d47e8a1b3966_0.file.ajax.contact-purchases.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/64079ff7af7c1d6826891ff8607ef73e65264249_0.file.ajax-edit-custom-field.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/6431f88ffe4334b9f5fe9a0f4a89626144aecc27_0.file.ajax.contact-invoices.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/646a523ec9b4fe381bb7026fcc4884563808c624_0.file.ajax.tasks.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/64e2a76876da3c4b65c4e01ecf5a060243c5011c_0.file.matters.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/6596718a23ab9b6fff96a96860c89b25e993f25d_0.file.contacts_list.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/6602cff3c012c833f7d1c1b424a2be8bc91222d4_0.file.client_quotes.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/660545a7276a65f1908332834517c85247d9c449_0.file.ajax-add-custom-field.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/66127b03284ae363003fd134805e45db2e5bcc72_0.file.hrm_expertise.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/68949cb5e077747105a499ffeb4015122e94f803_0.file.admin_plans.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/6a1d123cb7fe114d7e149113204c30d594e76602_0.file.pg.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/6af9f2e367da2b87c30b3a4fcc1dd72f90def52c_0.file.client-iview.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/6bf04313b723ec11b19567857c294489830def65_0.file.transactions_expense.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/6eb516fab1dbee5ac5007bdd8386f6718b04d5a8_0.file.account-profile-alt.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/6ebd5a0598a6baaf53d741e99f631aaff72c2626_0.file.transfer.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/711c685986eb8ca29c9614fce71b07176d4f9674_0.file.localisation.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/72779a4c2fcd47531488b2fe0e3df4fa3ff70e48_0.file.employee_payroll.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/72c5e5fccbf58ab9b534666f57546d0c21692e92_0.file.ajax.contact-invoices.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/76dd5881cac8b0617fe9b03f956fb26bd1cad80c_0.file.contacts_orders.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/789b0254c51f02ba95454a762a5b1891d8ebc093_0.file.ajax.contact-edit.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/78e0aec234853535ef980c5dc1c959254a191782_0.file.profile_client_credit_card_info.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/7a083de039f3a57a99480389030019e4a8efee67_0.file.settings_roles.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/7a1fa83533e0a0daf6efdb7357938ac00bee9aa1_0.file.sms_settings.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/7a2b2b6e8e4dc535c46c16971423cbd5ee2bbc5c_0.file.contacts_add.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/7b582941ce19427a75182c4c52d1dbb3ba6caf8f_0.file.contacts_files.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/7b6c935e20cb30e517cd4df413d0fdabc46e5604_0.file.assets_list.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/7d2f150e03ed1508fbbf42c43e9a2f7f34a2aa22_0.file.tickets_admin_view.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/7e04acc40c686b836f4c20a26cd2c63970d68fe8_0.file.accounts_balances.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/7f98f21b1f0b4e98ccce6b4febcfda70ac0be865_0.file.add-tax.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/7fcd1d43db1bbe8559f80e5452033b1d2e9e80d2_0.file.x_orders.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/8345fad74c22bac8d0830cc168fdd1f8640f4be9_0.file.ajax.contact-quotes.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/853a15bc5d98f2d8878af1cb2bd736a3429dd8a2_0.file.modal_lead.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/854091c49208fb096a0cf065cb0894c5c41aa7de_0.file.client_orders.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/8798ef4b4418e833c8adba0519a39f2e37266211_0.file.client_receipt.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/8a638d2c3ed6f4d6535e3510895713bcf6b1084c_0.file.transactions_bill.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/8a697200458b010df265019489fd7792bcee80ec_0.file.customfields.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/8add63a7f0b9a0983cfd14d18abe4c3e83f049d5_0.file.admin_servers.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/8ae2a3cd1f1895a8f1af195175376f2c47d35a44_0.file.client_new_order.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/8b53171d570cddfb52337197ac23954382cc880f_0.file.api.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/8c90017e84972dc95aa8b6aae55878be13e41f58_0.file.sms_bulk.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/8cdab635c60a7d6da9a2b1aa54f16333d1b540d8_0.file.contacts_list.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/8dd4bda6b62242085c060b24a76904200aed4957_0.file.modal_add_company.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/8f239cd2eb68eba10aefb3eea0da5596ef6d1503_0.file.reports.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/8f992039aba1acf03add976a2e12db1d375b80b1_0.file.pl-list.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/9031ace69a193711e2e582253fb0f2e23e9660b4_0.file.client_invoices.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/9251dc50b103bbe857e7461a963a2fb65303eb4c_0.file.accounts_equity.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/946be1502e1ca3d8118770f90d2fb3bb3b187793_0.file.settings.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/95c1711331bff0c7be4a0e63906155ca7d010998_0.file.companies.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/96420b456617b4dd524f01f868323b11f88801d3_0.file.quote-edit.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/967a5f7a94c5071e2d5c212d996df53e6582a623_0.file.client_dashboard.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/97894c962c3db48e5eda339208142c97e4512d23_0.file.invoices_view.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/97cd1b0834a11188c25d2900d8d648b992c4ff7a_0.file.reports_income.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/983bfb98a6d2915509f146202d36c68a9bba54f0_0.file.tickets_predefined_replies.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/991bf9a352e2be2a180cd0b2cebd5b917cef6a49_0.file.client_downloads.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/994da3b6f040c2c37402798b1743c43cbd45823b_0.file.reports-by-date.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/994e73fe531d4a45939d029a9f8b81fdd6292670_0.file.dev.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/996fe81741db3c14884d4a7948a52f95024fc84b_0.file.admin_end_user.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/9973e37c6344546fa2d01330f87200543a870437_0.file.purchases_add.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/9b29aef64496db56c33dfd144e2435c7852b7204_0.file.payments_make.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/9d0db4564fbd492b069f30eca527d0abdfb50c49_0.file.quotes.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/9d68bab97d29aaf7f29ba4e777a394d0e76de852_0.file.client_wrapper.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/a6059e3e9d15fcca3421701a2aff9f4bb820fc30_0.file.profile_client_password_manager.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/a61e82522741bb52aebdeb4ac14dd3079cd6de35_0.file.kb_client.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/a71d6cf8c7645f315a6662b0b06918c93f312c43_0.file.kb_all.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/a92884db2f503af1b77ba2ea7523fd1fccecbfd7_0.file.order.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/aa012b779e199645dc031f0c2c5be157095a6089_0.file.crm_groups.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/ab28e37cb3e5ffc2910fb3c5bc5e261955ebc581_0.file.users.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/ab406f15f7ccc3a3b544dce748114ae4510fed71_0.file.pmethods.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/ad060fef1a55d07c8580be3fe024d78829296a74_0.file.contacts_drive.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/ad4d4635d08cbeb2d9b10d8c8161259951937443_0.file.employee_payroll.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/ae68895abc751fc2bb9b59ea9c3c63a98a2f04f4_0.file.modal_search_staff.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/b0a9a757c8d041617582e45bc458d3859d9e1958_0.file.modal_edit_activity.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/b0ce24b90f5d493ac0d209c8650ed9399f9452ba_0.file.admin.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/b12a55871a7ff060293c5e1a7230e284ef440022_0.file.modal_units.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/b1910781ed905ed3eca3b9f851430b41f25f0226_0.file.reorder.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/b33b0ec8abd8284a1944f7e34fe2582bebe396b2_0.file.modal_asset.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/b4a35b420531432b4ed28da13ba3707cd3e7970a_0.file.ajax.contact-emails.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/b540dcdd6c3b78d5b52ccebd24abc074ef368ca4_0.file.transactions_manage.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/b609f1d80f3c6755b10db120a001d47bc0a320d9_0.file.client_end_user.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/b60cf02b280bcb648fcec1fd70b22d2df705f924_0.file.card_modal.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/b707be86760bc186eb2642e2674abdac64d3d9bd_0.file.modal_task_create.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/b7b145250c609585353c30ee8fba64c677aba533_0.file.statement-view.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/b7ffb9c8d40c7951b13383f7cf9674bc6953e06d_0.file.accounts_add.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/b89b4b5a9bc3dc4aae3d267e2888dac80dc8bba4_0.file.x_dashboard.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/b8feef09f254d4dd1b57b8c66e8d34bcfa431a10_0.file.x_products.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/b96aab70da02cf2375c6a12c3069f237073b656e_0.file.feature-settings.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/ba8d2749633b4ea3901db9d121245cd6fa7aab83_0.file.client_end_user.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/bc336822ea78ede7946893ba7111f928671efe0d_0.file.admin.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/bfae2abce2ace13a1bf96344e55ca7a448a01869_0.file.tasks.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/c04350dc2ff323035205c79cebb289821366e4e9_0.file.client_order_view.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/c1a106d60a55b3686c8c0c5193c31f4dbf172d92_0.file.appearance_editor.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/c27d84eec0b67d451006775f847a067951d5c36e_0.file.stripe.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/c47a3fb30ae460a386a45b87d722d890bbce7535_0.file.settings_edit_role.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/c524144ccecd5c496c552d4e538d23858842a0af_0.file.settings_currencies.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/c5935931fd833e594d98301d22448553d2a9202b_0.file.transactions_bills_all.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/c59ff3568278e7312d54bae34e8a74d7aa87f0ea_0.file.ajax.contact-summary.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/c5b805483cb1148cbe68a87298ff2a70b9707906_0.file.ajax.contact-more.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/c8299c2f709e325800674c09c632a58781ad67fb_0.file.hrm_proficiencies.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/c82a1f818fa2cc07ddb88cd0838b7d2c91ad7264_0.file.dashboard_tickets.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/ca34a747f75d946274763cae8b571c35a9dfc5c7_0.file.purchases_view.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/caf1870a936562a53497ab29c917c9fe62fbf086_0.file.employee_list.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/ccf90de5f7756408c7bfbc997da5650cf54d6a82_0.file.integration.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/cd22d49b67e00b69d89d32a34b68dd52495f91a2_0.file.client_view_item.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/d00ebe6d10be49cb60ee8789a6c64066b58dd4ba_0.file.purchases_edit.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/d02dba22cc2d6523b311e6cabdfc7340d75e6485_0.file.account-edit.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/d3ebab25a8d90b6b8e3ec66a31cc8ce59f3fca28_0.file.tickets_view.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/d3f28d015c16e2da9aafec3fc69a7e58940a5a69_0.file.reports_export.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/d4a8a1c9654703b2f1b07cb1408da7e0477c1ddd_0.file.employee_attendance.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/d4b60bbfa85399dac69db9f08a855b9b5b483f0b_0.file.invoices.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/d7d966aa9c804ed6cb9e4596feb0869351f0f598_0.file.tickets_admin_list.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/d8167a2a2d8a618e7e9b6a5ed39f37086438dca1_0.file.statement.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/d845be90e55e601733ee90f3ceee398684fd6610_0.file.orders_add.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/d915f01298b00e05095c46d51cc6ea87bd6a8b53_0.file.test.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/d943c34710076ea92aa56fc08b9d6923a5108cba_0.file.admin.tpl.php" afterPath="$PROJECT_DIR$/storage/compiled/d943c34710076ea92aa56fc08b9d6923a5108cba_0.file.admin.tpl.php" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/d966ff600103731c4004e14d5782bd73627c7460_0.file.reports_invoices_expense.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/d9fb8de04a9a972aee9deec5f79c8dd242e3c000_0.file.client.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/dbaaf8518d872f70d17f2d3eadc5986a501bd99e_0.file.server.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/dcd8629398edcfeffa30a0a431d2740a97298cb1_0.file.edit-tax.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/dcfedc1e3e4f136935c49b153fce2582257d1912_0.file.reports_invoices.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/ddaed7910c6caab1ae9a7608eb15bf238ff7eb54_0.file.client_dashboard.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/de1b88147474c0fe33660c829b86ee5572b339eb_0.file.app-settings.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/df471fd66963710c99c1edf3a1a59ff9d02d99d6_0.file.email-templates.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/df7221b56247604553eecd4746696c0907ab5473_0.file.reports_invoices_summary.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/e0390bc5c2bb2c6659ca28026f99fc4be9b5a1a1_0.file.matter_view.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/e0a395c7da1fc47b9a33ce560a330e25815f1731_0.file.contacts_files.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/e0c7f1f333e05a9f12148cead70594f5cffe8915_0.file.tasks.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/e1cdb1a7ab5df34e91e90c3dfae984a9b7586e01_0.file.orders.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/e1ead85b324339cf6e56da8e33e7d797548da633_0.file.contacts_find_by_group.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/e2ff4ac4f3f05b213a1db97d936e3a62e41a6146_0.file.ajax.contact-quotes.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/e539f5d3c5f12258510213f2ae1d1da20d82ca03_0.file.util_backups_files.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/e639f668b967fb55649e859c7860a4b5a41586a0_0.file.client_uploads.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/e8921f1c2cccb7676d924f34aa5b4774b433e03a_0.file.view.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/e8dd808614b5323f53194d229215579f2dbfd2a9_0.file.terminal.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/e92bea109e808747ceaf639f8888070b4c66ec7b_0.file.welcome.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/e93f3e66866e652eb490d57ff773005d7daec335_0.file.appearance_user_interface.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/e9f0ae05671c64540281ffe3e78423b66cfa3f0b_0.file.reports_purchases_summary.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/ea9c000b36b4fdd09b6baa5399d34b26ab2f46a7_0.file.util_backups.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/ec32903ee42defde720004e1bc5cfab65dbfe002_0.file.add-quote.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/ed3bddb41ef0b653a783d2a5b91bf3ef94bb061c_0.file.dashboard_canvas.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/edaa6d716dd10149fde9af3e6a5ea17199466459_0.file.contacts_orders.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/efbdf20778a29d317cdd446621a116a7e32555e8_0.file.modal_end_user.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/f14d69cd56baf023c91e4311a979654b3b441472_0.file.ajax.tasks.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/f34479343b4c8400d02bf9bdf8004280eb70cb0b_0.file.list-recurring-invoices.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/f41690a8e5bed9f4738ffb776c7ffc03cf7ef308_0.file.client_ticket_view.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/f4dc409def276dd5efcac3d0216236e9eabd773a_0.file.modal_view_company.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/f506a9ec797116b94209b80aab734ebd7cb1fd47_0.file.modal_add_currency.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/f589bc5c194a654607868a55293604a3d46c521a_0.file.categories-edit.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/f5b0bb983276d4095c4b9dde772d50f305b8a591_0.file.emls.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/f91be0cdcb24d0c45c19b2840dd7a8706581d2dd_0.file.admin_server.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/f97ab0d00b2baae37c12acaaef65c7c9d3b80940_0.file.tickets_admin_create.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/f9931df35a1e06b047e1c9cc08b49d7dabe68d4d_0.file.sales_delivery_challans.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/fb27c285a4826e2d7b7d97d893a0a809efbc58f8_0.file.products.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/fe19fccc1f7dfe7e0bd1a1b216b6ac961ad006dc_0.file.payments.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/ff0a11c5bc5142d9ade5f52a54ecc96d3c4800bc_0.file.customer.tpl.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/storage/compiled/ff2a93589c286ac1e8f8a94b87cf13d323a419c9_0.file.orders_view.tpl.php" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,8 +287,8 @@
       <file leaf-file-name="contacts.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/controllers/contacts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="391" column="25" lean-forward="false" selection-start-line="391" selection-start-column="25" selection-end-line="391" selection-end-column="25" />
+            <state relative-caret-position="34">
+              <caret line="133" column="44" lean-forward="true" selection-start-line="133" selection-start-column="44" selection-end-line="133" selection-end-column="44" />
               <folding>
                 <marker date="1566318530918" expanded="true" signature="1837:1926" ph="select id,ac... crm_accounts" />
                 <marker date="1566318530918" expanded="true" signature="1959:2101" ph="update crm_accounts... " />
@@ -120,11 +387,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -134,17 +401,17 @@
         <entry file="file://$PROJECT_DIR$/system/i18n/vi.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="438">
-              <caret line="1210" column="2" lean-forward="true" selection-start-line="1210" selection-start-column="2" selection-end-line="1210" selection-end-column="2" />
+              <caret line="1210" column="2" lean-forward="false" selection-start-line="1210" selection-start-column="2" selection-end-line="1210" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KoolPHP.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KoolPHP.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/models/KoolPHP.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            <state relative-caret-position="459">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -383,7 +650,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30134000" />
+    <option name="totallyTimeSpent" value="30475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -739,10 +1006,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/system/models/KoolPHP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/i18n/vi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="1210" column="2" lean-forward="false" selection-start-line="1210" selection-start-column="2" selection-end-line="1210" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/system/controllers/contacts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="391" column="25" lean-forward="false" selection-start-line="391" selection-start-column="25" selection-end-line="391" selection-end-column="25" />
+        <state relative-caret-position="34">
+          <caret line="133" column="44" lean-forward="true" selection-start-line="133" selection-start-column="44" selection-end-line="133" selection-end-column="44" />
           <folding>
             <marker date="1566318530918" expanded="true" signature="1837:1926" ph="select id,ac... crm_accounts" />
             <marker date="1566318530918" expanded="true" signature="1959:2101" ph="update crm_accounts... " />
@@ -800,26 +1083,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/i18n/vi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="1210" column="2" lean-forward="true" selection-start-line="1210" selection-start-column="2" selection-end-line="1210" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/models/KoolPHP.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        <state relative-caret-position="51">
+          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
           <folding />
         </state>
       </provider>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-08-17 23:36:21
+/* Smarty version 3.1.33, created on 2019-08-20 23:39:29
   from 'D:\xampp\htdocs\cloudonex\ui\theme\default\layouts\admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d582d05244934_00280187',
+  'unifunc' => 'content_5d5c22417193f4_46290848',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd943c34710076ea92aa56fc08b9d6923a5108cba' => 
     array (
       0 => 'D:\\xampp\\htdocs\\cloudonex\\ui\\theme\\default\\layouts\\admin.tpl',
-      1 => 1566059773,
+      1 => 1566308990,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d582d05244934_00280187 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d5c22417193f4_46290848 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -99,7 +99,7 @@ default/css/style-rtl.min.css" rel="stylesheet">
     <?php }?>
 
     <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_2815106565d582d0513a546_54261024', 'style');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6309014925d5c2241655f73_90237610', 'style');
 ?>
 
 
@@ -197,8 +197,16 @@ dev"><i class="fa fa-file-code-o"></i> <span class="nav-label"><?php echo $_smar
                             <a href="#"><i class="icon-users"></i> <span class="nav-label"><?php echo $_smarty_tpl->tpl_vars['_L']->value['Customers'];?>
 </span><span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-
-                                <?php if (has_access($_smarty_tpl->tpl_vars['user']->value->roleid,'customers','create')) {?>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+contacts/farmer"><?php echo $_smarty_tpl->tpl_vars['_L']->value['List Farmers'];?>
+</a></li>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+contacts/tree"><?php echo $_smarty_tpl->tpl_vars['_L']->value['List Trees'];?>
+</a></li>
+                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
+contacts/farmer-tree"><?php echo $_smarty_tpl->tpl_vars['_L']->value['List Farmer Trees'];?>
+</a></li>
+                                <!--<?php if (has_access($_smarty_tpl->tpl_vars['user']->value->roleid,'customers','create')) {?>
                                     <li><a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
 contacts/add"><?php echo $_smarty_tpl->tpl_vars['_L']->value['Add Customer'];?>
 </a></li>
@@ -238,29 +246,11 @@ foreach ($_from as $_smarty_tpl->tpl_vars['sm_crm']->value) {
                                 <?php
 }
 }
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>-->
                             </ul>
                         </li>
                     <?php }?>
 
-
-                    <?php if (has_access($_smarty_tpl->tpl_vars['user']->value->roleid,'customers')) {?>
-                        <li class="<?php if ($_smarty_tpl->tpl_vars['_application_menu']->value == 'contacts') {?>active<?php }?>">
-                            <a href="#"><i class="icon-users"></i> <span class="nav-label"><?php echo $_smarty_tpl->tpl_vars['_L']->value['KoolPHP'];?>
-KoolPHP</span><span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-
-                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
-contacts/farmer"><?php echo $_smarty_tpl->tpl_vars['_L']->value['List Customers'];?>
-</a></li>
-                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
-contacts/farmer-tree">Customer Trees</a></li>
-                                <li><a href="<?php echo $_smarty_tpl->tpl_vars['_url']->value;?>
-contacts/tree"><?php echo $_smarty_tpl->tpl_vars['_L']->value['List Trees'];?>
-</a></li>
-                            </ul>
-                        </li>
-                    <?php }?>
 
                     
                         
@@ -1115,7 +1105,7 @@ echo $_smarty_tpl->tpl_vars['notify']->value;
 
 
                 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7083006105d582d05219b85_01159068', "content");
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_19747962895d5c22416ff887_19684461', "content");
 ?>
 
 
@@ -1363,7 +1353,7 @@ _b"><?php echo '</script'; ?>
 <?php }?>
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9876076755d582d0523a177_64700986', 'script');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14685403015d5c2241712eb0_09652009', 'script');
 ?>
 
 
@@ -1391,12 +1381,12 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_9876076755d582d052
 </html>
 <?php }
 /* {block 'style'} */
-class Block_2815106565d582d0513a546_54261024 extends Smarty_Internal_Block
+class Block_6309014925d5c2241655f73_90237610 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'style' => 
   array (
-    0 => 'Block_2815106565d582d0513a546_54261024',
+    0 => 'Block_6309014925d5c2241655f73_90237610',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -1404,12 +1394,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'style'} */
 /* {block "content"} */
-class Block_7083006105d582d05219b85_01159068 extends Smarty_Internal_Block
+class Block_19747962895d5c22416ff887_19684461 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_7083006105d582d05219b85_01159068',
+    0 => 'Block_19747962895d5c22416ff887_19684461',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -1417,12 +1407,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block "content"} */
 /* {block 'script'} */
-class Block_9876076755d582d0523a177_64700986 extends Smarty_Internal_Block
+class Block_14685403015d5c2241712eb0_09652009 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'script' => 
   array (
-    0 => 'Block_9876076755d582d0523a177_64700986',
+    0 => 'Block_14685403015d5c2241712eb0_09652009',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
