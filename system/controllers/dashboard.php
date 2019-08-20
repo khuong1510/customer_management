@@ -550,6 +550,9 @@ switch($action){
 
        // dd($all_items[1]->name);
 
+        $farmer_info = FarmerTrees::getDashboardInfo();
+
+
         view('dashboard_canvas',[
             'expense_cats' => $expense_cats,
             'total_income' => $total_income,
@@ -569,6 +572,7 @@ switch($action){
             'balances' => $balances,
             'all_items' => $all_items,
             'tasks' => $tasks,
+            'farmer_info' => $farmer_info
         ]);
 
 

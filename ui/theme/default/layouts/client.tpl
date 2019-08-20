@@ -97,17 +97,25 @@ License: You must have a valid license purchased only from cloudonex.com in orde
 
 
                     {$client_extra_nav[0]}
-                    <li {if $_application_menu eq 'dashboard'}class="active"{/if}><a href="{$_url}client/dashboard/">
+                   <!-- <li {if $_application_menu eq 'dashboard'}class="active"{/if}><a href="{$_url}client/dashboard/">
                             <i class="icon-th-large-outline"></i>
                             <span class="nav-label">{$_L['Dashboard']}</span></a></li>
+-->
                     {$client_extra_nav[1]}
 
 
 
+                    <li class="active" {if $_application_menu eq 'farmer-tree'}class="active"{/if}><a href="#"><i class="fa fa-life-ring"></i> <span class="nav-label">{$_L['List Farmer Trees']}</span><span class="fa arrow"></span></a>
+
+                        <ul class="nav nav-second-level">
+                            <li><a href="{$_url}client/farmer-tree/all" >{$_L['List Farmer Trees']}</a></li>
+                            <li><a href="{$_url}client/farmer-tree/new" >{$_L['Add New']}</a></li>
+
+                        </ul>
+                    </li>
 
 
-
-                    {if ($config['orders'] eq '1')}
+                    <!-- {if ($config['orders'] eq '1')}
 
 
                         <li {if $_application_menu eq 'orders'}class="active"{/if}><a href="#"><i class="fa fa-server"></i> <span class="nav-label">{$_L['Orders']}</span><span class="fa arrow"></span></a>
@@ -172,7 +180,7 @@ License: You must have a valid license purchased only from cloudonex.com in orde
 
 
                     <li {if $_application_menu eq 'profile'}class="active"{/if}><a href="{$_url}client/profile/"><i class="icon-user-1"></i> <span class="nav-label">{$_L['Profile']}</span></a></li>
-
+-->
 
                 </ul>
 
@@ -240,8 +248,8 @@ License: You must have a valid license purchased only from cloudonex.com in orde
 
             <div class="wrapper wrapper-content animated fadeIn">
                 {if isset($notify)}
-                {$notify}
-{/if}
+                    {$notify}
+                {/if}
 
 
 

@@ -139,8 +139,10 @@
                         <li class="{if $_application_menu eq 'contacts'}active{/if}">
                             <a href="#"><i class="icon-users"></i> <span class="nav-label">{$_L['Customers']}</span><span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-
-                                {if has_access($user->roleid,'customers','create')}
+                                <li><a href="{$_url}contacts/farmer">{$_L['List Farmers']}</a></li>
+                                <li><a href="{$_url}contacts/tree">{$_L['List Trees']}</a></li>
+                                <li><a href="{$_url}contacts/farmer-tree">{$_L['List Farmer Trees']}</a></li>
+                                <!--{if has_access($user->roleid,'customers','create')}
                                     <li><a href="{$_url}contacts/add">{$_L['Add Customer']}</a></li>
                                 {/if}
                                 <li><a href="{$_url}contacts/list">{$_L['List Customers']}</a></li>
@@ -162,23 +164,11 @@
                                     {$sm_crm}
 
 
-                                {/foreach}
+                                {/foreach}-->
                             </ul>
                         </li>
                     {/if}
 
-
-                    {if has_access($user->roleid,'customers')}
-                        <li class="{if $_application_menu eq 'contacts'}active{/if}">
-                            <a href="#"><i class="icon-users"></i> <span class="nav-label">{$_L['KoolPHP']}KoolPHP</span><span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-
-                                <li><a href="{$_url}contacts/farmer">{$_L['List Customers']}</a></li>
-                                <li><a href="{$_url}contacts/farmer-tree">Customer Trees</a></li>
-                                <li><a href="{$_url}contacts/tree">{$_L['List Trees']}</a></li>
-                            </ul>
-                        </li>
-                    {/if}
 
                     {*{if isset($config['client_has_sub_client']) && $config['client_has_sub_client'] == 1}*}
 

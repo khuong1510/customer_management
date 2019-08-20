@@ -59,7 +59,7 @@
                                 {*</div>*}
                                 {*</div>*}
 
-                                <div class="form-group"><label class="col-md-4 control-label" for="cid">{$_L['Company']}</label>
+                                <!--<div class="form-group"><label class="col-md-4 control-label" for="cid">{$_L['Company']}</label>
 
                                     <div class="col-lg-8">
 
@@ -84,7 +84,7 @@
                                         </div>
                                     </div>
 
-                                {/if}
+                                {/if}-->
 
 
 
@@ -163,21 +163,38 @@
 
 
 
-                                <div class="form-group"><label class="col-md-4 control-label" for="address">{$_L['Address']}</label>
+                                <!--<div class="form-group"><label class="col-md-4 control-label" for="address">{$_L['Address']}</label>
 
                                     <div class="col-lg-8"><input type="text" id="address" name="address" class="form-control">
 
                                     </div>
+                                </div>-->
+
+                                <div class="form-group"><label class="col-md-4 control-label" for="address">{$_L['Street']}</label>
+
+                                    <div class="col-lg-8"><input type="text" id="street" name="street" class="form-control">
+
+                                    </div>
                                 </div>
+                                <div class="form-group"><label class="col-md-4 control-label" for="address">{$_L['Ward']}</label>
 
+                                    <div class="col-lg-8"><input type="text" id="ward" name="ward" class="form-control">
 
+                                    </div>
+                                </div>
+                                <div class="form-group"><label class="col-md-4 control-label" for="address">{$_L['District']}</label>
+
+                                    <div class="col-lg-8"><input type="text" id="district" name="district" class="form-control">
+
+                                    </div>
+                                </div>
                                 <div class="form-group"><label class="col-md-4 control-label" for="city">{$_L['City']}</label>
 
                                     <div class="col-lg-8"><input type="text" id="city" name="city" class="form-control">
 
                                     </div>
                                 </div>
-                                <div class="form-group"><label class="col-md-4 control-label" for="state">{$_L['State Region']}</label>
+                               <!-- <div class="form-group"><label class="col-md-4 control-label" for="state">{$_L['State Region']}</label>
 
                                     <div class="col-lg-8"><input type="text" id="state" name="state" class="form-control">
 
@@ -188,14 +205,14 @@
                                     <div class="col-lg-8"><input type="text" id="zip" name="zip" class="form-control">
 
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="form-group"><label class="col-md-4 control-label" for="country">{$_L['Country']}</label>
 
                                     <div class="col-lg-8">
 
                                         <select name="country" id="country" class="form-control">
-                                            <option value="">{$_L['Select Country']}</option>
-                                            {$countries}
+                                            <option value="Viet Nam">Viet Nam</option>
+                                            {*$countries*}
                                         </select>
 
                                     </div>
@@ -252,7 +269,7 @@
                                     </div>
                                 {/foreach}
 
-                                <div class="form-group"><label class="col-md-4 control-label" for="tags">{$_L['Tags']}</label>
+                                <!--<div class="form-group"><label class="col-md-4 control-label" for="tags">{$_L['Tags']}</label>
 
                                     <div class="col-lg-8">
                                         {*<input type="text" id="tags" name="tags" style="width:100%">*}
@@ -263,8 +280,9 @@
 
                                         </select>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
+                            <!--
                             <div class="col-md-6 col-sm-12">
 
 
@@ -359,6 +377,7 @@
 
 
                             </div>
+                            -->
                         </div>
 
 

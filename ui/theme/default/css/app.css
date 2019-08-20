@@ -10286,3 +10286,17 @@ li.fancybox-thumbs-loading {background: rgba(0, 0, 0, .1)}
 .has-danger .form-control{
     border-color: #d32f2f;
 }
+
+.farmer-info table{
+    width: 100%;
+}
+.farmer-info table td,
+.farmer-info table th {
+    border: 1px solid #fff;
+    padding: 10px;
+    text-align: center;
+}
+.farmer-info table th:first-child,
+.farmer-info table td:first-child{
+    text-align: left;
+}

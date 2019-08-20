@@ -32,7 +32,9 @@
                             {$user->account}
                             <br>
                         {/if}
-                        {$user->address} <br>
+                        {$user->street} <br>
+                        {$user->ward}<br>
+                        {$user->district}<br/>
                         {$user->city} <br>
                         {$user->state} - {$user->zip} <br>
                         {$user->country}
@@ -91,12 +93,12 @@
                             </div>
                         </div>
 
-                        <div class="form-group"><label class="col-lg-2 control-label" for="company">{$_L['Company Name']}</label>
+                      <!--  <div class="form-group"><label class="col-lg-2 control-label" for="company">{$_L['Company Name']}</label>
 
                             <div class="col-lg-10"><input type="text" id="company" name="company" class="form-control" value="{$d['company']}">
 
                             </div>
-                        </div>
+                        </div>-->
 
                         <div class="form-group"><label class="col-lg-2 control-label" for="edit_email">{$_L['Email']}</label>
 
@@ -113,7 +115,7 @@
 
                         {if $config['show_business_number'] eq '1'}
 
-                            <div class="form-group">
+                           <!-- <div class="form-group">
 
                                 <label class="col-lg-2 control-label" for="business_number">{$config['label_business_number']}</label>
 
@@ -123,12 +125,30 @@
 
                                 </div>
                             </div>
-
+-->
                         {/if}
 
-                        <div class="form-group"><label class="col-lg-2 control-label" for="address">{$_L['Address']}</label>
+                        <!--<div class="form-group"><label class="col-lg-2 control-label" for="address">{$_L['Address']}</label>
 
                             <div class="col-lg-10"><input type="text" id="address" name="address" class="form-control" value="{$d['address']}">
+
+                            </div>
+                        </div>-->
+                        <div class="form-group"><label class="col-lg-2 control-label" for="address">{$_L['Street']}</label>
+
+                            <div class="col-lg-10"><input type="text" id="street" name="street" class="form-control" value="{$d['street']}">
+
+                            </div>
+                        </div>
+                        <div class="form-group"><label class="col-lg-2 control-label" for="address">{$_L['Ward']}</label>
+
+                            <div class="col-lg-10"><input type="text" id="ward" name="ward" class="form-control" value="{$d['ward']}">
+
+                            </div>
+                        </div>
+                        <div class="form-group"><label class="col-lg-2 control-label" for="address">{$_L['District']}</label>
+
+                            <div class="col-lg-10"><input type="text" id="district" name="district" class="form-control" value="{$d['district']}">
 
                             </div>
                         </div>
@@ -138,7 +158,7 @@
 
                             </div>
                         </div>
-                        <div class="form-group"><label class="col-lg-2 control-label" for="state">{$_L['State Region']}</label>
+                       <!-- <div class="form-group"><label class="col-lg-2 control-label" for="state">{$_L['State Region']}</label>
 
                             <div class="col-lg-10"><input type="text" id="state" name="state" class="form-control" value="{$d['state']}">
 
@@ -149,14 +169,13 @@
                             <div class="col-lg-10"><input type="text" id="zip" name="zip" class="form-control" value="{$d['zip']}">
 
                             </div>
-                        </div>
+                        </div>-->
                         <div class="form-group"><label class="col-lg-2 control-label" for="country">{$_L['Country']}</label>
 
                             <div class="col-lg-10">
 
                                 <select name="country" id="country" class="form-control">
-                                    <option value="">{$_L['Select Country']}</option>
-                                    {$countries}
+                                    <option value="Viet Nam">Viet Nam</option>
                                 </select>
 
                             </div>

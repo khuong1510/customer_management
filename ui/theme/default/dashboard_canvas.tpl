@@ -26,8 +26,28 @@
                         <div class="row" id="d_ajax_summary">
 
                             <div class="col-md-4"><div class="chart-statistic-box">
-                                    <div class="chart-txt">
-                                        <div class="chart-txt-top">
+                                    <div class="chart-txt farmer-info">
+                                        <div>
+                                            <p><span class="amount"><b>Tổng số nông dân:</b></span>
+                                                <span>{$farmer_info['total_farmer']}</span></p><br>
+                                        </div>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Cây trồng</th>
+                                                    <th>Số lượng</th>
+                                                    <th>Diện tích</th>
+                                                </tr>
+                                            </thead>
+                                            {foreach $farmer_info['tree'] as $item}
+                                                <tr>
+                                                    <td class="title">{$item['name']}</td>
+                                                    <td>{$item['amount']}</td>
+                                                    <td>{$item['area']}</td>
+                                                </tr>
+                                            {/foreach}
+                                        </table>
+                                        <!--<div class="chart-txt-top">
 
                                             {if $all_data_access }
                                                 <p><span class="amount number">{$net_worth}</span></p>
@@ -57,7 +77,7 @@
                                                 <td class="amount">{$me}</td>
                                                 <td>{$_L['Expense This Month']}</td>
                                             </tr>
-                                        </table>
+                                        </table>-->
                                     </div>
 
                                 </div></div>

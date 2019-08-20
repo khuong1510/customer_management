@@ -36,13 +36,19 @@ require($KoolControlsFolder."/KoolGrid/koolgrid.php");
 require($KoolControlsFolder."/KoolGrid/ext/datasources/MySQLiDataSource.php");
 require($KoolControlsFolder."/KoolCalendar/koolcalendar.php");
 
+$user = User::_info();
+$_SESSION["language_select"] = $user->language == "vi" ? "vn" : $user->language;
+
 switch ($action) {
     case 'farmer':
+
+        $ui->assign('_title', $_L['List Farmers']);
+        $ui->assign('_url_import', "import_csv");
         $db_con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         mysqli_set_charset($db_con, 'utf8');
-        
+
         $ds = new MySQLiDataSource($db_con);
-        $ds->SelectCommand = "select id,account,phone,street,ward,district,city from crm_accounts";
+        $ds->SelectCommand = "select id,account,phone,street,ward,district,city from crm_accounts where type='Customer'";
         $ds->UpdateCommand = "update crm_accounts set account='@account', phone='@phone', street='@street', ward='@ward', district ='@district', city='@city' where id = @id";
         $ds->DeleteCommand = "delete from crm_accounts where id=@id";
         $ds->InsertCommand = "insert into crm_accounts (account,phone,street,ward,district,city) values ('@account','@phone','@street','@ward','@district','@city');";
@@ -74,38 +80,38 @@ switch ($action) {
 //        $column = new GridDateTimeColumn();
         $column = new GridTextAreaColumn();
         $column->DataField = "account";
-        $column->HeaderText = "Full Name";
+        $column->HeaderText = $_L['Full Name'];
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "phone";
-        $column->HeaderText = "Phone";
+        $column->HeaderText = $_L['Phone'];
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "street";
-        $column->HeaderText = "Street";
+        $column->HeaderText = $_L['Street'];
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "ward";
-        $column->HeaderText = "Ward";
+        $column->HeaderText = $_L['Ward'];
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "district";
-        $column->HeaderText = "District";
+        $column->HeaderText = $_L['District'];
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "city";
-        $column->HeaderText = "City";
+        $column->HeaderText = $_L['City'];
         $grid->MasterTable->AddColumn($column);
 
 
         $column = new GridEditDeleteColumn();
         $column->Align = "center";
-        $column->HeaderText = "Action";
+        $column->HeaderText = $_L['Action'];
         $grid->MasterTable->AddColumn($column);
 
         $grid->MasterTable->EditSettings->Mode = "Inline";
@@ -115,6 +121,7 @@ switch ($action) {
         //Insert Settings
         $grid->MasterTable->InsertSettings->Mode = "Form";
         $grid->MasterTable->InsertSettings->ColumnNumber = 2;
+        $grid->Localization->Load($KoolControlsFolder."/KoolGrid/localization/".$_SESSION["language_select"].".xml");
 
         $grid->Process();
 
@@ -127,6 +134,8 @@ switch ($action) {
         break;
 
     case 'tree':
+        $ui->assign('_title', $_L['List Trees']);
+//        $ui->assign('_url_import', "tree/import_csv");
         $db_con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         mysqli_set_charset($db_con, 'utf8');
 
@@ -163,12 +172,12 @@ switch ($action) {
 //        $column = new GridDateTimeColumn();
         $column = new GridTextAreaColumn();
         $column->DataField = "name";
-        $column->HeaderText = "Tree Name";
+        $column->HeaderText = $_L['Tree Name'];
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridEditDeleteColumn();
         $column->Align = "center";
-        $column->HeaderText = "Action";
+        $column->HeaderText = $_L['Action'];
         $grid->MasterTable->AddColumn($column);
 
         $grid->MasterTable->EditSettings->Mode = "Inline";
@@ -178,7 +187,7 @@ switch ($action) {
         //Insert Settings
         $grid->MasterTable->InsertSettings->Mode = "Form";
         $grid->MasterTable->InsertSettings->ColumnNumber = 2;
-
+        $grid->Localization->Load($KoolControlsFolder."/KoolGrid/localization/".$_SESSION["language_select"].".xml");
         $grid->Process();
 
         mysqli_close($db_con);
@@ -190,17 +199,19 @@ switch ($action) {
         break;
 
     case 'farmer-tree':
+        $ui->assign('_title', $_L['List Farmer Trees']);
+        $ui->assign('_url_import', "");
         $db_con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         mysqli_set_charset($db_con, 'utf8');
 
         $ds_mapping = new MySQLiDataSource($db_con);
-        $ds_mapping->SelectCommand = "select id,account_id,tree_id,area,age,amount from tree_mapping";
+        $ds_mapping->SelectCommand = "select tree_mapping.id,account_id,tree_id,area,age,amount from tree_mapping ";
         $ds_mapping->UpdateCommand = "update tree_mapping set tree_id='@tree_id', area='@area', age='@age', amount='@amount' where id = @id";
         $ds_mapping->DeleteCommand = "delete from tree_mapping where id=@id";
         $ds_mapping->InsertCommand = "insert into tree_mapping (account_id,tree_id,area,age,amount) values ('@account_id', '@tree_id', '@area', '@age', '@amount');";
 
         $ds_customer = new MySQLiDataSource($db_con);
-        $ds_customer->SelectCommand = "select id,account,phone,street,ward,district,city from crm_accounts";
+        $ds_customer->SelectCommand = "select crm_accounts.id,account,phone,street,ward,district,city from crm_accounts where type LIKE '%Customer%'";
         $ds_customer->UpdateCommand = "update crm_accounts set account='@account', phone='@phone', street='@street', ward='@ward', district ='@district', city='@city' where id = @id";
         $ds_customer->DeleteCommand = "delete from crm_accounts where id=@id";
         $ds_customer->InsertCommand = "insert into crm_accounts (account,phone,street,ward,district,city) values ('@account','@phone','@street','@ward','@district','@city');";
@@ -220,7 +231,7 @@ switch ($action) {
         $grid->AllowHovering = true;
         $grid->AllowSelecting = true;
         $grid->PageSize = 20;
-        $grid->AllowScrolling = true;
+//        $grid->AllowScrolling = true;
         $grid->styleFolder = "sunset";
         $grid->AjaxLoadingImage =  $KoolControlsFolder."/KoolAjax/loading/5.gif";
 
@@ -228,7 +239,7 @@ switch ($action) {
         $table_mapping->Width = "100%";
         $table_mapping->DataSource = $ds_mapping;
         $table_mapping->AddRelationField("account_id", "id");
-        $table_mapping->AutoGenerateExpandColumn = true;
+//        $table_mapping->AutoGenerateExpandColumn = true;
         $table_mapping->DisableAutoGenerateDataFields = "account_id";
         $table_mapping->AllowEditing = true;
         $table_mapping->AllowDeleting = true;
@@ -243,8 +254,8 @@ switch ($action) {
         // Tree Mapping Columns
         $column = new GridDropDownColumn();
         $column->DataField = "tree_id";
-        $column->HeaderText = "Tree Name";
-        $tree_names = ORM::for_table('tree')->select('name')->order_by_desc('name')->find_array();
+        $column->HeaderText = $_L['Tree Name'];
+        $tree_names = ORM::for_table('tree')->select('name')->find_array();
         foreach ($tree_names as $tree) {
             $column->AddItem($tree['name']);
         }
@@ -252,22 +263,22 @@ switch ($action) {
 
         $column = new GridTextAreaColumn();
         $column->DataField = "area";
-        $column->HeaderText = "Area";
+        $column->HeaderText = $_L['Area'];
         $table_mapping->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "age";
-        $column->HeaderText = "Age";
+        $column->HeaderText = $_L['Age'];
         $table_mapping->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "amount";
-        $column->HeaderText = "Amount";
+        $column->HeaderText = $_L['Amount'];
         $table_mapping->AddColumn($column);
 
         $column = new GridEditDeleteColumn();
         $column->Align = "center";
-        $column->HeaderText = "Action";
+        $column->HeaderText = $_L['Action'];
         $table_mapping->AddColumn($column);
         // End Tree Mapping Columns
 
@@ -288,37 +299,37 @@ switch ($action) {
 
         $column = new GridTextAreaColumn();
         $column->DataField = "account";
-        $column->HeaderText = "Full Name";
+        $column->HeaderText = $_L['Full Name'];
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "phone";
-        $column->HeaderText = "Phone";
+        $column->HeaderText = $_L['Phone'];
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "street";
-        $column->HeaderText = "Street";
+        $column->HeaderText = $_L['Street'];
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "ward";
-        $column->HeaderText = "Ward";
+        $column->HeaderText = $_L['Ward'];
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "district";
-        $column->HeaderText = "District";
+        $column->HeaderText = $_L['District'];
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "city";
-        $column->HeaderText = "City";
+        $column->HeaderText = $_L['City'];
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridEditDeleteColumn();
         $column->Align = "center";
-        $column->HeaderText = "Action";
+        $column->HeaderText = $_L['Action'];
         $grid->MasterTable->AddColumn($column);
         // End Farmer Columns
 
@@ -327,11 +338,10 @@ switch ($action) {
         //Insert Settings
         $grid->MasterTable->InsertSettings->Mode = "Form";
         $grid->MasterTable->InsertSettings->ColumnNumber = 2;
-
+        $grid->Localization->Load($KoolControlsFolder."/KoolGrid/localization/".$_SESSION["language_select"].".xml");
         $grid->Process();
 
         mysqli_close($db_con);
-
         view('koolphp',[
             'koolajax' => $koolajax->Render(),
             'grid' => $grid->Render()
@@ -430,14 +440,14 @@ _L[\'New Company\'] = \''.$_L['New Company'].'\';
         $owners = getOwners($user);
 
 
-       // $ui->display('add-contact.tpl');
+        // $ui->display('add-contact.tpl');
 
         view('contacts_add',[
             'contact_type' => $contact_type,
             'title_type' => $title_type,
             'db_type' => $db_type,
             'predict_customer_number' => $predict_customer_number,
-	        'owners' => $owners
+            'owners' => $owners
         ]);
 
 
@@ -496,7 +506,7 @@ _L[\'New Company\'] = \''.$_L['New Company'].'\';
             $ui->assign('css_class',$css_class);
             $ui->assign('d_amount',$d_amount);
 
-           // $customer = $d;
+            // $customer = $d;
 
             Event::trigger('contacts/summary_display/');
 
@@ -934,7 +944,7 @@ _L[\'New Company\'] = \''.$_L['New Company'].'\';
         }
 
 
-      //  $company = _post('company');
+        //  $company = _post('company');
 
         $company_id = _post('cid');
 
@@ -947,6 +957,9 @@ _L[\'New Company\'] = \''.$_L['New Company'].'\';
         $currency = _post('currency');
 
         $address = _post('address');
+        $street = _post('street');
+        $ward = _post('ward');
+        $district = _post('district');
         $city = _post('city');
         $state = _post('state');
         $zip = _post('zip');
@@ -999,14 +1012,6 @@ _L[\'New Company\'] = \''.$_L['New Company'].'\';
 
 
         }
-        else{
-
-
-        }
-
-
-
-
 
 
 
@@ -1049,15 +1054,15 @@ _L[\'New Company\'] = \''.$_L['New Company'].'\';
             }
         }
 
-	    if($secondary_email != ''){
+        if($secondary_email != ''){
 
-		    if(!filter_var($secondary_email, FILTER_VALIDATE_EMAIL)){
-			    $msg .= $_L['Invalid Email'].' <br>';
-		    }
-	    }
-	    else{
-	    	$secondary_email = '';
-	    }
+            if(!filter_var($secondary_email, FILTER_VALIDATE_EMAIL)){
+                $msg .= $_L['Invalid Email'].' <br>';
+            }
+        }
+        else{
+            $secondary_email = '';
+        }
 
 
         if($phone != ''){
@@ -1116,9 +1121,9 @@ _L[\'New Company\'] = \''.$_L['New Company'].'\';
             $data['created_at'] = date('Y-m-d H:i:s');
             $data['updated_at'] = date('Y-m-d H:i:s');
 
-          //  $type = _post('type');
+            //  $type = _post('type');
 
-	        $owner_id = _post('owner_id');
+            $owner_id = _post('owner_id');
 
 
             $d = ORM::for_table('crm_accounts')->create();
@@ -1128,6 +1133,9 @@ _L[\'New Company\'] = \''.$_L['New Company'].'\';
             $d->phone = $phone;
             $d->address = $address;
             $d->city = $city;
+            $d->street = $street;
+            $d->ward = $ward;
+            $d->district = $district;
             $d->zip = $zip;
             $d->state = $state;
             $d->country = $country;
@@ -1181,7 +1189,7 @@ _L[\'New Company\'] = \''.$_L['New Company'].'\';
 
             //
 
-	        $d->secondary_email = $secondary_email;
+            $d->secondary_email = $secondary_email;
 
             //
             $d->save();
@@ -1260,6 +1268,7 @@ _L[\'New Company\'] = \''.$_L['New Company'].'\';
 
     case 'list':
 
+
         Event::trigger('contacts/list/');
 
         $show_company_column = false;
@@ -1277,6 +1286,9 @@ _L[\'New Company\'] = \''.$_L['New Company'].'\';
 
         if($type == 'supplier'){
             $ui->assign('_application_menu', 'suppliers');
+        }
+        else {
+            r2(U . 'contacts/farmer/');
         }
 
         $ui->assign('companies',db_find_array('sys_companies',array('id','company_name')));
@@ -1314,7 +1326,7 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
 
 
             $account = _post('account');
-           // $company = _post('company');
+            // $company = _post('company');
 
             $company_id = _post('company_id');
 
@@ -1349,6 +1361,9 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
 
             $phone = _post('phone');
             $address = _post('address');
+            $street = _post('street');
+            $ward = _post('ward');
+            $district = _post('district');
             $city = _post('city');
             $state = _post('state');
             $zip = _post('zip');
@@ -1401,7 +1416,7 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
 //            if($country == ''){
 //                $msg .= 'Country is required <br>';
 //            }
-                if($email != ''){
+            if($email != ''){
 
                 if($email != ($d['email'])){
                     $f = ORM::for_table('crm_accounts')->where('email',$email)->find_one();
@@ -1424,13 +1439,13 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
 
 
 
-                $secondary_email = _post('secondary_email');
+            $secondary_email = _post('secondary_email');
 
 
 
-	        if(!filter_var($secondary_email, FILTER_VALIDATE_EMAIL)){
-		        $secondary_email = '';
-	        }
+            if(!filter_var($secondary_email, FILTER_VALIDATE_EMAIL)){
+                $secondary_email = '';
+            }
 
             if($gid != ''){
                 $g = db_find_one('crm_groups',$gid);
@@ -1459,6 +1474,9 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
                 $d->tags = Arr::arr_to_str($tags);
                 $d->phone = $phone;
                 $d->address = $address;
+                $d->street = $street;
+                $d->ward = $ward;
+                $d->district = $district;
                 $d->city = $city;
                 $d->zip = $zip;
                 $d->state = $state;
@@ -1722,14 +1740,14 @@ $country
         $d = ORM::for_table('crm_accounts')->find_one($cid);
         $email = $d['email'];
         $toname = $d['account'];
-$subject = _post('subject');
+        $subject = _post('subject');
         if($subject == ''){
             $msg .= $_L['Subject is Empty'].' <br>';
         }
         $message = $_POST['message'];
-if($message == ''){
-    $msg .= $_L['Message is Empty'].' <br>';
-}
+        if($message == ''){
+            $msg .= $_L['Message is Empty'].' <br>';
+        }
         if($msg == ''){
             //send email
             Notify_Email::_send($toname,$email,$subject,$message,$cid);
@@ -1802,7 +1820,7 @@ if($message == ''){
 
         $headerDisplayed = false;
 
-       // $results = ORM::for_table('crm_Accounts')->find_array();
+        // $results = ORM::for_table('crm_Accounts')->find_array();
         $results = db_find_array('crm_accounts',array('id','account','company','phone','email','address','city','state','zip','country','balance','tags'));
 
         foreach ( $results as $data ) {
@@ -1857,7 +1875,7 @@ if($message == ''){
 
         $uploader   =   new Uploader();
         $uploader->setDir('storage/temp/');
-       // $uploader->sameName(true);
+        // $uploader->sameName(true);
         $uploader->setExtensions(array('csv'));  //allowed extensions list//
         if($uploader->uploadFile('file')){   //txtFile is the filebrowse element name //
             $uploaded  =   $uploader->getUploadName(); //get uploaded file name, renames on upload//
@@ -1878,7 +1896,7 @@ if($message == ''){
 
             $uploaded = $_SESSION['uploaded'];
 
-          // _msglog('s',$uploaded);
+            // _msglog('s',$uploaded);
 
 //            $csvData = file_get_contents('storage/temp/'.$uploaded);
 //            $lines = explode(PHP_EOL, $csvData);
@@ -1903,16 +1921,11 @@ if($message == ''){
 
                 $data = array();
                 $data['account'] = $contact['Full Name'];
-                $data['email'] = $contact['Email'];
                 $data['phone'] = $contact['Phone'];
-                $data['address'] = $contact['Address'];
+                $data['street'] = $contact['Street'];
+                $data['ward'] = $contact['Ward'];
+                $data['district'] = $contact['District'];
                 $data['city'] = $contact['City'];
-                $data['zip'] = $contact['Zip'];
-                $data['state'] = $contact['State'];
-                $data['country'] = $contact['Country'];
-                $data['company'] = $contact['Company'];
-
-
 
                 $save = Contacts::add($data);
 
@@ -1995,7 +2008,7 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
             $d->separateinvoices = '';
             $d->sorder = 0;
 
-           $d->save();
+            $d->save();
 
             echo $d->id();
 
@@ -2035,7 +2048,7 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
 
                 $ui->assign('d',$d);
                 $ui->assign('gid',$gid);
-               // $ui->assign('ids',$ids);
+                // $ui->assign('ids',$ids);
 
                 $ui->assign('xfooter',Asset::js(array('js/redirect','js/group_email')));
 
@@ -2185,7 +2198,7 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
 _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
  ');
 
-      //  $ui->assign('_application_menu', 'companies');
+        //  $ui->assign('_application_menu', 'companies');
 
         $ui->assign('_st', $_L['Companies']);
 
@@ -2194,7 +2207,7 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
         $companies = Company::orderBy('id','desc')->get()->toArray();
 
 
-        
+
 
         $ui->assign('xheader',Asset::css(array('modal','s2/css/select2.min','footable/css/footable.core.min')));
         $ui->assign('xfooter',Asset::js(array('modal','tinymce/tinymce.min','js/editor','numeric','s2/js/select2.min','s2/js/i18n/'.lan(),'footable/js/footable.all.min')));
@@ -2267,7 +2280,7 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
             $val['zip'] = '';
             $val['state'] = '';
             $val['country'] = '';
-          //  $val[''] = '';
+            //  $val[''] = '';
 
             $countries = Countries::all($config['country']);
         }
@@ -2360,7 +2373,7 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
 
         $company->logo_url = $logo_path;
 
-        
+
         $company->save();
 
         if($creating)
@@ -2388,7 +2401,7 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
             $ui->assign('d',$d);
             view('modal_edit_activity');
         }
-        
+
 
         break;
 
@@ -2421,7 +2434,7 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
 
     case 'orders':
 
-       // Event::trigger('contacts/orders/');
+        // Event::trigger('contacts/orders/');
 
         $cid = _post('cid');
         $d = ORM::for_table('crm_accounts')->find_one($cid);
@@ -2762,7 +2775,7 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
             $customers = Contacts::findByCompany($cid);
 
 
-          //  var_dump($invoices);
+            //  var_dump($invoices);
 
 
 
@@ -3245,7 +3258,7 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
 
 
 
-      //  $x = $d->find_array();
+        //  $x = $d->find_array();
 
 
 
@@ -3462,9 +3475,9 @@ _L[\'are_you_sure\'] = \''.$_L['are_you_sure'].'\';
 
 
 
-       // var_dump($records);
+        // var_dump($records);
 
-     //   exit;
+        //   exit;
 
         api_response($records);
 
