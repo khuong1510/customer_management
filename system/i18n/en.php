@@ -1204,10 +1204,9 @@ $_L = [
     'Enable Signature' => 'Enable Signature',
     'Action' => 'Action',
     'Tree Name' => "Tree Name",
-    'Add New' => "Add New",
     'Age' => 'Age',
-    'Amount' => 'Amount',
     'Area' => 'Area',
     'Data Created Successfully.' => 'Data Created Successfully.',
-    'This phone is exited. Please add other phone.' => 'This phone is exited. Please add other phone.'
+    'This phone is exited. Please add other phone.' => 'This phone is exited. Please add other phone.',
+    'Please input correct number' => 'Please input correct number'
 ];

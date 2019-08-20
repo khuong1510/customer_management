@@ -1202,10 +1202,10 @@ $_L = [
     'Enable Signature' => 'Enable Signature',
     'Action' => "Thao tác",
     'Tree Name' => "Cây trồng",
-    'Add New' => "Thêm mới",
     'Age' => 'Tuổi cây',
     'Amount' => 'Số lượng',
     'Area' => 'Diện tích',
     'Data Created Successfully.' => 'Dữ liệu được tạo thành công.',
-    'This phone is exited. Please add other phone.' => 'Số điện thoại này đã tồn tại. Vui lòng chọn số điện thoại khác.'
+    'This phone is exited. Please add other phone.' => 'Số điện thoại này đã tồn tại. Vui lòng chọn số điện thoại khác.',
+    'Please input correct number' => 'Vui lòng nhập số chính xác.'
 ];

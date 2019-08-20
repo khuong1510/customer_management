@@ -2,30 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83312d4d-2e95-46c6-8c61-9617a99cbf6b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/install/primary.sql" afterPath="$PROJECT_DIR$/install/primary.sql" />
-      <change beforePath="$PROJECT_DIR$/storage/compiled/d943c34710076ea92aa56fc08b9d6923a5108cba_0.file.admin.tpl.php" afterPath="$PROJECT_DIR$/storage/compiled/d943c34710076ea92aa56fc08b9d6923a5108cba_0.file.admin.tpl.php" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/system/controllers/contacts.php" afterPath="$PROJECT_DIR$/system/controllers/contacts.php" />
       <change beforePath="$PROJECT_DIR$/system/i18n/en.php" afterPath="$PROJECT_DIR$/system/i18n/en.php" />
-      <change beforePath="$PROJECT_DIR$/ui/theme/default/layouts/admin.tpl" afterPath="$PROJECT_DIR$/ui/theme/default/layouts/admin.tpl" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/.idea/KoolPHPSuite.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/.idea/workspace.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/Examples/KoolGrid/Columns/ColumnTypes/example.php" afterPath="$PROJECT_DIR$/vendor/KoolPHPSuite/Examples/KoolGrid/Columns/ColumnTypes/example.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/Examples/KoolGrid/Columns/ColumnTypes/example.xml" afterPath="$PROJECT_DIR$/vendor/KoolPHPSuite/Examples/KoolGrid/Columns/ColumnTypes/example.xml" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/Examples/KoolGrid/Editing/FormEditing/example.php" afterPath="$PROJECT_DIR$/vendor/KoolPHPSuite/Examples/KoolGrid/Editing/FormEditing/example.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/Examples/KoolGrid/Editing/InlineEditing/example.php" afterPath="$PROJECT_DIR$/vendor/KoolPHPSuite/Examples/KoolGrid/Editing/InlineEditing/example.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/Examples/KoolGrid/Validation/Insert_Edit_Validation/example.php" afterPath="$PROJECT_DIR$/vendor/KoolPHPSuite/Examples/KoolGrid/Validation/Insert_Edit_Validation/example.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/KoolControls/KoolCalendar/koolcalendar.php" afterPath="$PROJECT_DIR$/vendor/KoolPHPSuite/KoolControls/KoolCalendar/koolcalendar.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/KoolControls/KoolCalendar/styles/default/default.css" afterPath="$PROJECT_DIR$/vendor/KoolPHPSuite/KoolControls/KoolCalendar/styles/default/default.css" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/KoolControls/KoolCalendar/styles/sunset/Thumbs.db" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/KoolControls/KoolChart/koolchart.php" afterPath="$PROJECT_DIR$/vendor/KoolPHPSuite/KoolControls/KoolChart/koolchart.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/KoolControls/KoolForm/koolform.php" afterPath="$PROJECT_DIR$/vendor/KoolPHPSuite/KoolControls/KoolForm/koolform.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/KoolControls/KoolGrid/koolgrid.php" afterPath="$PROJECT_DIR$/vendor/KoolPHPSuite/KoolControls/KoolGrid/koolgrid.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/KoolControls/KoolListBox/koollistbox.php" afterPath="$PROJECT_DIR$/vendor/KoolPHPSuite/KoolControls/KoolListBox/koollistbox.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/KoolControls/KoolPivotTable/koolpivottable.php" afterPath="$PROJECT_DIR$/vendor/KoolPHPSuite/KoolControls/KoolPivotTable/koolpivottable.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/Resources/config.php" afterPath="$PROJECT_DIR$/vendor/KoolPHPSuite/Resources/config.php" />
-      <change beforePath="$PROJECT_DIR$/vendor/KoolPHPSuite/controls.xml" afterPath="$PROJECT_DIR$/vendor/KoolPHPSuite/controls.xml" />
+      <change beforePath="$PROJECT_DIR$/system/i18n/vi.php" afterPath="$PROJECT_DIR$/system/i18n/vi.php" />
+      <change beforePath="$PROJECT_DIR$/system/models/KoolPHP.php" afterPath="$PROJECT_DIR$/system/models/KoolPHP.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,63 +20,72 @@
       <file leaf-file-name="contacts.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/controllers/contacts.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="221" column="29" lean-forward="false" selection-start-line="221" selection-start-column="29" selection-end-line="221" selection-end-column="29" />
+            <state relative-caret-position="442">
+              <caret line="391" column="25" lean-forward="false" selection-start-line="391" selection-start-column="25" selection-end-line="391" selection-end-column="25" />
               <folding>
-                <marker date="1566064157260" expanded="true" signature="1314:1381" ph="select id,ac... crm_accounts" />
-                <marker date="1566064157260" expanded="true" signature="1414:1556" ph="update crm_accounts... " />
-                <marker date="1566064157260" expanded="true" signature="1589:1626" ph="delete from crm_accounts... " />
-                <marker date="1566064157260" expanded="true" signature="1659:1792" ph="insert into crm_accounts... " />
-                <marker date="1566064157260" expanded="true" signature="4602:4626" ph="select id,na... tree" />
-                <marker date="1566064157260" expanded="true" signature="4659:4702" ph="update tree... " />
-                <marker date="1566064157260" expanded="true" signature="4735:4764" ph="delete from tree... " />
-                <marker date="1566064157260" expanded="true" signature="4797:4837" ph="insert into tree... " />
-                <marker date="1566064157260" expanded="true" signature="6812:6874" ph="select id,na... tree_mapping" />
-                <marker date="1566064157260" expanded="true" signature="6915:7016" ph="update tree_mapping... " />
-                <marker date="1566064157260" expanded="true" signature="7057:7094" ph="delete from tree_mapping... " />
-                <marker date="1566064157260" expanded="true" signature="7135:7259" ph="insert into tree_mapping... " />
-                <marker date="1566064157260" expanded="true" signature="7357:7424" ph="select id,ac... crm_accounts" />
-                <marker date="1566064157260" expanded="true" signature="7423:7424" ph="select custo... customers" />
-                <marker date="1566064157260" expanded="true" signature="7466:7608" ph="update crm_accounts... " />
-                <marker date="1566064157260" expanded="true" signature="7650:7687" ph="delete from crm_accounts... " />
-                <marker date="1566064157260" expanded="true" signature="7729:7862" ph="insert into crm_accounts... " />
-                <marker date="1566064157260" expanded="true" signature="40672:40743" ph="update sys_invoices... " />
-                <marker date="1566064157260" expanded="true" signature="52566:52627" ph="update crm_accounts... " />
-                <marker date="1566064157260" expanded="true" signature="64207:64500" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="64832:65058" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="64843:65002" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="64854:64990" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="65013:65049" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="65390:65910" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="67041:67896" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="67608:67882" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="68344:68721" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="68356:68646" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="68365:68633" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="68658:68712" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="69280:70092" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="69814:70078" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="70540:70955" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="70552:70880" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="70561:70867" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="70892:70946" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="71515:71916" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="72364:72772" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="72376:72697" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="72385:72684" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="72709:72763" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="73628:74376" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="74189:74362" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="74825:75292" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="74837:75217" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="74846:75204" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="75229:75283" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="88596:88790" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="88876:89131" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="88888:89061" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="88897:89048" ph="..." />
-                <marker date="1566064157260" expanded="true" signature="89073:89122" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="1837:1926" ph="select id,ac... crm_accounts" />
+                <marker date="1566318530918" expanded="true" signature="1959:2101" ph="update crm_accounts... " />
+                <marker date="1566318530918" expanded="true" signature="2134:2171" ph="delete from crm_accounts... " />
+                <marker date="1566318530918" expanded="true" signature="2204:2337" ph="insert into crm_accounts... " />
+                <marker date="1566318530918" expanded="true" signature="5502:5526" ph="select id,na... tree" />
+                <marker date="1566318530918" expanded="true" signature="5559:5602" ph="update tree... " />
+                <marker date="1566318530918" expanded="true" signature="5635:5664" ph="delete from tree... " />
+                <marker date="1566318530918" expanded="true" signature="5697:5737" ph="insert into tree... " />
+                <marker date="1566318530918" expanded="true" signature="7890:7965" ph="select tree_... tree_mapping" />
+                <marker date="1566318530918" expanded="true" signature="8007:8108" ph="update tree_mapping... " />
+                <marker date="1566318530918" expanded="true" signature="8149:8186" ph="delete from tree_mapping... " />
+                <marker date="1566318530918" expanded="true" signature="8227:8351" ph="insert into tree_mapping... " />
+                <marker date="1566318530918" expanded="true" signature="8449:8558" ph="select crm_a... crm_accounts" />
+                <marker date="1566318530918" expanded="true" signature="8600:8742" ph="update crm_accounts... " />
+                <marker date="1566318530918" expanded="true" signature="8784:8821" ph="delete from crm_accounts... " />
+                <marker date="1566318530918" expanded="true" signature="8863:8996" ph="insert into crm_accounts... " />
+                <marker date="1566318530918" expanded="true" signature="43341:43412" ph="update sys_invoices... " />
+                <marker date="1566318530918" expanded="true" signature="55113:55174" ph="update crm_accounts... " />
+                <marker date="1566318530918" expanded="true" signature="66735:67028" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="67360:67586" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="67371:67530" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="67382:67518" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="67541:67577" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="67918:68438" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="69571:70426" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="70138:70412" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="70874:71251" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="70886:71176" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="70895:71163" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="71188:71242" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="71810:72622" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="72344:72608" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="73070:73485" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="73082:73410" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="73091:73397" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="73422:73476" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="74045:74446" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="74894:75302" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="74906:75227" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="74915:75214" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="75239:75293" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="76158:76906" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="76719:76892" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="77355:77822" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="77367:77747" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="77376:77734" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="77759:77813" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="91132:91326" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="91412:91667" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="91424:91597" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="91433:91584" ph="..." />
+                <marker date="1566318530918" expanded="true" signature="91609:91658" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="koolphp.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui/theme/default/koolphp.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -103,7 +93,7 @@
       <file leaf-file-name="primary.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/install/primary.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
+            <state relative-caret-position="289">
               <caret line="2812" column="42" lean-forward="false" selection-start-line="2812" selection-start-column="42" selection-end-line="2812" selection-end-column="42" />
               <folding />
             </state>
@@ -113,11 +103,9 @@
       <file leaf-file-name="admin.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui/theme/default/layouts/admin.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="176" column="61" lean-forward="false" selection-start-line="176" selection-start-column="61" selection-end-line="176" selection-end-column="72" />
-              <folding>
-                <element signature="e#37871#37877#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="-340">
+              <caret line="192" column="82" lean-forward="false" selection-start-line="192" selection-start-column="79" selection-end-line="192" selection-end-column="82" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,42 +113,48 @@
       <file leaf-file-name="en.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/system/i18n/en.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="770">
-              <caret line="1198" column="31" lean-forward="false" selection-start-line="1198" selection-start-column="31" selection-end-line="1198" selection-end-column="31" />
+            <state relative-caret-position="353">
+              <caret line="1206" column="19" lean-forward="false" selection-start-line="1206" selection-start-column="19" selection-end-line="1206" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KoolPHP.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/system/models/KoolPHP.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="54" />
-              <folding>
-                <marker date="1565801211638" expanded="true" signature="2166:2213" ph="select id,ac... crm_accounts" />
-                <marker date="1565801211638" expanded="true" signature="2246:2333" ph="update crm_accounts... " />
-                <marker date="1565801211638" expanded="true" signature="2366:2403" ph="delete from crm_accounts... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="koolphp.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/theme/default/koolphp.tpl">
+      <file leaf-file-name="vi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/i18n/vi.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+            <state relative-caret-position="438">
+              <caret line="1210" column="2" lean-forward="true" selection-start-line="1210" selection-start-column="2" selection-end-line="1210" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KoolPHP.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/system/models/KoolPHP.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FarmerTrees.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/system/autoload/FarmerTrees.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="47" column="8" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -171,16 +165,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="426">
               <caret line="881" column="23" lean-forward="false" selection-start-line="881" selection-start-column="23" selection-end-line="881" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contacts_add.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ui/theme/default/contacts_add.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11016">
-              <caret line="648" column="0" lean-forward="false" selection-start-line="648" selection-start-column="0" selection-end-line="648" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -212,6 +196,7 @@
       <find>KoolPHPSuite/KoolControls/KoolGrid/styles/koolgrid.css</find>
       <find>crm_account</find>
       <find>json_li</find>
+      <find>'Add New'</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -263,7 +248,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -355,6 +339,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -398,30 +383,43 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30026000" />
+    <option name="totallyTimeSpent" value="30134000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15833333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15833333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="16" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15833333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,13 +433,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../vnpay_php/vnpay_return.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../vnpay_php/vnpay_create_payment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -664,14 +655,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="22" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/theme/default/koolphp.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+        <state relative-caret-position="306">
+          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -694,19 +684,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11016">
           <caret line="648" column="0" lean-forward="false" selection-start-line="648" selection-start-column="0" selection-end-line="648" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/models/KoolPHP.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="54" />
-          <folding>
-            <marker date="1565801211638" expanded="true" signature="2166:2213" ph="select id,ac... crm_accounts" />
-            <marker date="1565801211638" expanded="true" signature="2246:2333" ph="update crm_accounts... " />
-            <marker date="1565801211638" expanded="true" signature="2366:2403" ph="delete from crm_accounts... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -714,25 +691,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system/i18n/en.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="770">
-          <caret line="1198" column="31" lean-forward="false" selection-start-line="1198" selection-start-column="31" selection-end-line="1198" selection-end-column="31" />
+        <state relative-caret-position="353">
+          <caret line="1206" column="19" lean-forward="false" selection-start-line="1206" selection-start-column="19" selection-end-line="1206" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ui/theme/default/layouts/admin.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="176" column="61" lean-forward="false" selection-start-line="176" selection-start-column="61" selection-end-line="176" selection-end-column="72" />
-          <folding>
-            <element signature="e#37871#37877#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="-340">
+          <caret line="192" column="82" lean-forward="false" selection-start-line="192" selection-start-column="79" selection-end-line="192" selection-end-column="82" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -759,7 +733,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/install/primary.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
+        <state relative-caret-position="289">
           <caret line="2812" column="42" lean-forward="false" selection-start-line="2812" selection-start-column="42" selection-end-line="2812" selection-end-column="42" />
           <folding />
         </state>
@@ -767,70 +741,85 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/system/controllers/contacts.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="221" column="29" lean-forward="false" selection-start-line="221" selection-start-column="29" selection-end-line="221" selection-end-column="29" />
+        <state relative-caret-position="442">
+          <caret line="391" column="25" lean-forward="false" selection-start-line="391" selection-start-column="25" selection-end-line="391" selection-end-column="25" />
           <folding>
-            <marker date="1566064157260" expanded="true" signature="1314:1381" ph="select id,ac... crm_accounts" />
-            <marker date="1566064157260" expanded="true" signature="1414:1556" ph="update crm_accounts... " />
-            <marker date="1566064157260" expanded="true" signature="1589:1626" ph="delete from crm_accounts... " />
-            <marker date="1566064157260" expanded="true" signature="1659:1792" ph="insert into crm_accounts... " />
-            <marker date="1566064157260" expanded="true" signature="4602:4626" ph="select id,na... tree" />
-            <marker date="1566064157260" expanded="true" signature="4659:4702" ph="update tree... " />
-            <marker date="1566064157260" expanded="true" signature="4735:4764" ph="delete from tree... " />
-            <marker date="1566064157260" expanded="true" signature="4797:4837" ph="insert into tree... " />
-            <marker date="1566064157260" expanded="true" signature="6812:6874" ph="select id,na... tree_mapping" />
-            <marker date="1566064157260" expanded="true" signature="6915:7016" ph="update tree_mapping... " />
-            <marker date="1566064157260" expanded="true" signature="7057:7094" ph="delete from tree_mapping... " />
-            <marker date="1566064157260" expanded="true" signature="7135:7259" ph="insert into tree_mapping... " />
-            <marker date="1566064157260" expanded="true" signature="7357:7424" ph="select id,ac... crm_accounts" />
-            <marker date="1566064157260" expanded="true" signature="7423:7424" ph="select custo... customers" />
-            <marker date="1566064157260" expanded="true" signature="7466:7608" ph="update crm_accounts... " />
-            <marker date="1566064157260" expanded="true" signature="7650:7687" ph="delete from crm_accounts... " />
-            <marker date="1566064157260" expanded="true" signature="7729:7862" ph="insert into crm_accounts... " />
-            <marker date="1566064157260" expanded="true" signature="40672:40743" ph="update sys_invoices... " />
-            <marker date="1566064157260" expanded="true" signature="52566:52627" ph="update crm_accounts... " />
-            <marker date="1566064157260" expanded="true" signature="64207:64500" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="64832:65058" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="64843:65002" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="64854:64990" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="65013:65049" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="65390:65910" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="67041:67896" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="67608:67882" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="68344:68721" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="68356:68646" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="68365:68633" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="68658:68712" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="69280:70092" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="69814:70078" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="70540:70955" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="70552:70880" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="70561:70867" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="70892:70946" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="71515:71916" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="72364:72772" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="72376:72697" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="72385:72684" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="72709:72763" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="73628:74376" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="74189:74362" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="74825:75292" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="74837:75217" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="74846:75204" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="75229:75283" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="88596:88790" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="88876:89131" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="88888:89061" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="88897:89048" ph="..." />
-            <marker date="1566064157260" expanded="true" signature="89073:89122" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="1837:1926" ph="select id,ac... crm_accounts" />
+            <marker date="1566318530918" expanded="true" signature="1959:2101" ph="update crm_accounts... " />
+            <marker date="1566318530918" expanded="true" signature="2134:2171" ph="delete from crm_accounts... " />
+            <marker date="1566318530918" expanded="true" signature="2204:2337" ph="insert into crm_accounts... " />
+            <marker date="1566318530918" expanded="true" signature="5502:5526" ph="select id,na... tree" />
+            <marker date="1566318530918" expanded="true" signature="5559:5602" ph="update tree... " />
+            <marker date="1566318530918" expanded="true" signature="5635:5664" ph="delete from tree... " />
+            <marker date="1566318530918" expanded="true" signature="5697:5737" ph="insert into tree... " />
+            <marker date="1566318530918" expanded="true" signature="7890:7965" ph="select tree_... tree_mapping" />
+            <marker date="1566318530918" expanded="true" signature="8007:8108" ph="update tree_mapping... " />
+            <marker date="1566318530918" expanded="true" signature="8149:8186" ph="delete from tree_mapping... " />
+            <marker date="1566318530918" expanded="true" signature="8227:8351" ph="insert into tree_mapping... " />
+            <marker date="1566318530918" expanded="true" signature="8449:8558" ph="select crm_a... crm_accounts" />
+            <marker date="1566318530918" expanded="true" signature="8600:8742" ph="update crm_accounts... " />
+            <marker date="1566318530918" expanded="true" signature="8784:8821" ph="delete from crm_accounts... " />
+            <marker date="1566318530918" expanded="true" signature="8863:8996" ph="insert into crm_accounts... " />
+            <marker date="1566318530918" expanded="true" signature="43341:43412" ph="update sys_invoices... " />
+            <marker date="1566318530918" expanded="true" signature="55113:55174" ph="update crm_accounts... " />
+            <marker date="1566318530918" expanded="true" signature="66735:67028" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="67360:67586" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="67371:67530" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="67382:67518" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="67541:67577" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="67918:68438" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="69571:70426" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="70138:70412" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="70874:71251" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="70886:71176" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="70895:71163" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="71188:71242" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="71810:72622" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="72344:72608" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="73070:73485" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="73082:73410" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="73091:73397" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="73422:73476" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="74045:74446" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="74894:75302" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="74906:75227" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="74915:75214" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="75239:75293" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="76158:76906" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="76719:76892" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="77355:77822" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="77367:77747" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="77376:77734" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="77759:77813" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="91132:91326" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="91412:91667" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="91424:91597" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="91433:91584" ph="..." />
+            <marker date="1566318530918" expanded="true" signature="91609:91658" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/i18n/vi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="1210" column="2" lean-forward="true" selection-start-line="1210" selection-start-column="2" selection-end-line="1210" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="8" lean-forward="true" selection-start-line="2" selection-start-column="8" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/models/KoolPHP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="5" lean-forward="false" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding />
         </state>
       </provider>

@@ -39,6 +39,24 @@ require($KoolControlsFolder."/KoolCalendar/koolcalendar.php");
 $user = User::_info();
 $_SESSION["language_select"] = $user->language == "vi" ? "vn" : $user->language;
 
+/**
+ * Validate phone
+ * @param $phone
+ * @return null
+ */
+function validatePhone($phone)
+{
+    global $_L;
+    $farmerTree = new FarmerTrees();
+    $isExistPhone = $farmerTree->validatePhone($phone);
+
+    if ($isExistPhone) {
+        return $_L['This phone is exited. Please add other phone.'];
+    }
+
+    return null;
+}
+
 switch ($action) {
     case 'farmer':
 
@@ -77,7 +95,6 @@ switch ($action) {
         $column->ReadOnly = true;
         $grid->MasterTable->AddColumn($column);
 
-//        $column = new GridDateTimeColumn();
         $column = new GridTextAreaColumn();
         $column->DataField = "account";
         $column->HeaderText = $_L['Full Name'];
@@ -86,6 +103,9 @@ switch ($action) {
         $column = new GridTextAreaColumn();
         $column->DataField = "phone";
         $column->HeaderText = $_L['Phone'];
+        $validator = new CustomValidator();
+        $validator->ValidateFunction = validatePhone;
+        $column->AddValidator($validator);
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridTextAreaColumn();
@@ -169,7 +189,6 @@ switch ($action) {
         $column->ReadOnly = true;
         $grid->MasterTable->AddColumn($column);
 
-//        $column = new GridDateTimeColumn();
         $column = new GridTextAreaColumn();
         $column->DataField = "name";
         $column->HeaderText = $_L['Tree Name'];
@@ -264,16 +283,28 @@ switch ($action) {
         $column = new GridTextAreaColumn();
         $column->DataField = "area";
         $column->HeaderText = $_L['Area'];
+        $validator = new RegularExpressionValidator();
+        $validator->ValidationExpression = "/^\d+(\.\d+)?$/";
+        $validator->ErrorMessage = $_L["Please input correct number"];
+        $column->AddValidator($validator);
         $table_mapping->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "age";
         $column->HeaderText = $_L['Age'];
+        $validator = new RegularExpressionValidator();
+        $validator->ValidationExpression = "/^[-+]?\d+(\.\d+)?$/";
+        $validator->ErrorMessage = $_L["Please input correct number"];
+        $column->AddValidator($validator);
         $table_mapping->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "amount";
         $column->HeaderText = $_L['Amount'];
+        $validator = new RegularExpressionValidator();
+        $validator->ValidationExpression = "/^[-+]?\d+(\.\d+)?$/";
+        $validator->ErrorMessage = $_L["Please input correct number"];
+        $column->AddValidator($validator);
         $table_mapping->AddColumn($column);
 
         $column = new GridEditDeleteColumn();
@@ -305,6 +336,9 @@ switch ($action) {
         $column = new GridTextAreaColumn();
         $column->DataField = "phone";
         $column->HeaderText = $_L['Phone'];
+        $validator = new CustomValidator();
+        $validator->ValidateFunction = validatePhone;
+        $column->AddValidator($validator);
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridTextAreaColumn();
@@ -342,6 +376,7 @@ switch ($action) {
         $grid->Process();
 
         mysqli_close($db_con);
+
         view('koolphp',[
             'koolajax' => $koolajax->Render(),
             'grid' => $grid->Render()
