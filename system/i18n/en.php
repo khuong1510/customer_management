@@ -1207,6 +1207,6 @@ $_L = [
     'Age' => 'Age',
     'Area' => 'Area',
     'Data Created Successfully.' => 'Data Created Successfully.',
-    'This phone is exited. Please add other phone.' => 'This phone is exited. Please add other phone.',
+    'This phone is existed. Please add other phone.' => 'This phone is existed. Please add other phone.',
     'Please input correct number' => 'Please input correct number'
 ];

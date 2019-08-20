@@ -1191,7 +1191,7 @@ $_L = [
     'Details' => 'Details',
     'Bills' => 'Bills',
     'Add a bill' => 'Add a bill',
-    'This field is required' => 'This field is required',
+    'This field is required' => 'Vui lòng nhập vào trường này.',
     'Next Due Date' => 'Next Due Date',
     'From Account' => 'From Account',
     'Website' => 'Website',
@@ -1206,6 +1206,6 @@ $_L = [
     'Amount' => 'Số lượng',
     'Area' => 'Diện tích',
     'Data Created Successfully.' => 'Dữ liệu được tạo thành công.',
-    'This phone is exited. Please add other phone.' => 'Số điện thoại này đã tồn tại. Vui lòng chọn số điện thoại khác.',
+    'This phone is existed. Please add other phone.' => 'Số điện thoại này đã tồn tại. Vui lòng chọn số điện thoại khác.',
     'Please input correct number' => 'Vui lòng nhập số chính xác.'
 ];

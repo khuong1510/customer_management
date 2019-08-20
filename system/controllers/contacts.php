@@ -39,24 +39,6 @@ require($KoolControlsFolder."/KoolCalendar/koolcalendar.php");
 $user = User::_info();
 $_SESSION["language_select"] = $user->language == "vi" ? "vn" : $user->language;
 
-/**
- * Validate phone
- * @param $phone
- * @return null
- */
-function validatePhone($phone)
-{
-    global $_L;
-    $farmerTree = new FarmerTrees();
-    $isExistPhone = $farmerTree->validatePhone($phone);
-
-    if ($isExistPhone) {
-        return $_L['This phone is exited. Please add other phone.'];
-    }
-
-    return null;
-}
-
 switch ($action) {
     case 'farmer':
 
@@ -98,13 +80,15 @@ switch ($action) {
         $column = new GridTextAreaColumn();
         $column->DataField = "account";
         $column->HeaderText = $_L['Full Name'];
+        $validator = new RequiredFieldValidator();
+        $validator->ErrorMessage = $_L['This field is required'];
+        $column->AddValidator($validator);
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "phone";
         $column->HeaderText = $_L['Phone'];
-        $validator = new CustomValidator();
-        $validator->ValidateFunction = validatePhone;
+        $validator = new KoolPhoneValidator();
         $column->AddValidator($validator);
         $grid->MasterTable->AddColumn($column);
 
@@ -331,13 +315,15 @@ switch ($action) {
         $column = new GridTextAreaColumn();
         $column->DataField = "account";
         $column->HeaderText = $_L['Full Name'];
+        $validator = new RequiredFieldValidator();
+        $validator->ErrorMessage = $_L['This field is required'];
+        $column->AddValidator($validator);
         $grid->MasterTable->AddColumn($column);
 
         $column = new GridTextAreaColumn();
         $column->DataField = "phone";
         $column->HeaderText = $_L['Phone'];
-        $validator = new CustomValidator();
-        $validator->ValidateFunction = validatePhone;
+        $validator = new KoolPhoneValidator();
         $column->AddValidator($validator);
         $grid->MasterTable->AddColumn($column);
 
