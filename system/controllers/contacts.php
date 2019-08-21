@@ -44,6 +44,8 @@ switch ($action) {
 
         $ui->assign('_title', $_L['List Farmers']);
         $ui->assign('_url_import', "import_csv");
+        $ui->assign('_url_export', "export_csv");
+
         $db_con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         mysqli_set_charset($db_con, 'utf8');
 
@@ -1827,27 +1829,37 @@ $country
 
     case 'export_csv':
 
-
-        $fileName = 'contacts_'.time().'.csv';
-
+//        $fileName = 'contacts_'.time().'.csv';
+        $fileName = 'farmer_'.time().'.csv';
+        $fh = @fopen( 'php://output', 'w' );
         header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
         header('Content-Description: File Transfer');
-        header("Content-type: text/csv");
+        header("Content-type: application/csv");
         header("Content-Disposition: attachment; filename={$fileName}");
         header("Expires: 0");
         header("Pragma: public");
-
-        $fh = @fopen( 'php://output', 'w' );
-
+        ob_end_clean();
         $headerDisplayed = false;
 
-        // $results = ORM::for_table('crm_Accounts')->find_array();
-        $results = db_find_array('crm_accounts',array('id','account','company','phone','email','address','city','state','zip','country','balance','tags'));
-
+        //        $results = db_find_array('crm_accounts',array('id','account','street','ward','district','city','phone'));
+        $results = ORM::for_table('crm_accounts')
+                        ->select_many(['ID' => 'id'],
+                            [$_L['Full Name'] => 'account'],
+                            [$_L['Phone'] => 'phone'],
+                            [$_L['Street'] => 'street'],
+                            [$_L['Ward'] => 'ward'],
+                            [$_L['District'] => 'district'],
+                            [$_L['City'] => 'city'])
+                        ->where('type', "Customer")->find_array();
         foreach ( $results as $data ) {
             // Add a header row if it hasn't been added yet
+            if (count($data) == 0) {
+                continue;
+            }
+
             if ( !$headerDisplayed ) {
                 // Use the keys from $data as the titles
+
                 fputcsv($fh, array_keys($data));
                 $headerDisplayed = true;
             }
@@ -1937,16 +1949,25 @@ $country
 
 
             $cn = 0;
-
+            $flag_duplicate = false;
             foreach($contacts as $contact){
 
                 $data = array();
-                $data['account'] = $contact['Full Name'];
-                $data['phone'] = $contact['Phone'];
-                $data['street'] = $contact['Street'];
-                $data['ward'] = $contact['Ward'];
-                $data['district'] = $contact['District'];
-                $data['city'] = $contact['City'];
+                $data['account'] = $contact[$_L['Full Name']];
+                $data['phone'] = $contact[$_L['Phone']];
+                $data['street'] = $contact[$_L['Street']];
+                $data['ward'] = $contact[$_L['Ward']];
+                $data['district'] = $contact[$_L['District']];
+                $data['city'] = $contact[$_L['City']];
+
+                if(!empty($data['phone'])){
+                    $check_phone = FarmerTrees::validatePhone($contact[$_L['Phone']]);
+                    if($check_phone){
+                        //phone has existed
+                        $flag_duplicate = true;
+                        continue;
+                    }
+                }
 
                 $save = Contacts::add($data);
 
