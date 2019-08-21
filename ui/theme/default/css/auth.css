@@ -11738,3 +11738,7 @@ html[dir=rtl] #main-wrapper[data-sidebartype=overlay].show-sidebar .left-sidebar
         display: block !important
     }
 }
+
+#loginform img {
+    max-width: 200px;
+}

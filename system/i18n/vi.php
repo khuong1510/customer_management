@@ -1202,6 +1202,7 @@ $_L = [
     'Enable Signature' => 'Enable Signature',
     'Action' => "Thao tác",
     'Tree Name' => "Cây trồng",
+    'Add New' => "Thêm mới",
     'Age' => 'Tuổi cây',
     'Amount' => 'Số lượng',
     'Area' => 'Diện tích',
