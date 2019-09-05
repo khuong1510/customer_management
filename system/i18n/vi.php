@@ -1208,5 +1208,10 @@ $_L = [
     'Area' => 'Diện tích',
     'Data Created Successfully.' => 'Dữ liệu được tạo thành công.',
     'This phone is existed. Please add other phone.' => 'Số điện thoại này đã tồn tại. Vui lòng chọn số điện thoại khác.',
-    'Please input correct number' => 'Vui lòng nhập số chính xác.'
+    'Please input correct number' => 'Vui lòng nhập số chính xác.',
+    'List Questions' => 'Danh sách câu hỏi',
+    'Question Content' => 'Nội dung câu hỏi',
+    'List Videos' => 'Danh sách video',
+    'Link' => 'Đường dẫn',
+    'Answer Content' => 'Câu trả lời'
 ];

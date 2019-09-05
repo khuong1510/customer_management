@@ -93,16 +93,16 @@ switch ($action) {
                 mysqli_set_charset($db_con, 'utf8');
 
                 $ds_mapping = new MySQLiDataSource($db_con);
-                $ds_mapping->SelectCommand = "select tree_mapping.id,account_id,tree_id,area,age,amount from tree_mapping ";
-                $ds_mapping->UpdateCommand = "update tree_mapping set tree_id='@tree_id', area='@area', age='@age', amount='@amount' where id = @id";
+                $ds_mapping->SelectCommand = "select tree_mapping.id,account_id,tree_id,age,amount from tree_mapping ";
+                $ds_mapping->UpdateCommand = "update tree_mapping set tree_id='@tree_id', age='@age', amount='@amount' where id = @id";
                 $ds_mapping->DeleteCommand = "delete from tree_mapping where id=@id";
-                $ds_mapping->InsertCommand = "insert into tree_mapping (account_id,tree_id,area,age,amount) values ('@account_id', '@tree_id', '@area', '@age', '@amount');";
+                $ds_mapping->InsertCommand = "insert into tree_mapping (account_id,tree_id,age,amount) values ('@account_id', '@tree_id', '@age', '@amount');";
 
                 $ds_customer = new MySQLiDataSource($db_con);
-                $ds_customer->SelectCommand = "select crm_accounts.id,account,phone,street,ward,district,city from crm_accounts where type LIKE '%Customer%' and cid = ".$c->id;
-                $ds_customer->UpdateCommand = "update crm_accounts set account='@account', phone='@phone', street='@street', ward='@ward', district ='@district', city='@city' where id = @id";
+                $ds_customer->SelectCommand = "select crm_accounts.id,account, area,phone,street,ward,district,city from crm_accounts where type LIKE '%Customer%' and cid = ".$c->id;
+                $ds_customer->UpdateCommand = "update crm_accounts set account='@account',area='@area', phone='@phone', street='@street', ward='@ward', district ='@district', city='@city' where id = @id";
                 $ds_customer->DeleteCommand = "delete from crm_accounts where id=@id";
-                $ds_customer->InsertCommand = "insert into crm_accounts (account,phone,street,ward,district,city,cid) values ('@account','@phone','@street','@ward','@district','@city','".$c->id."');";
+                $ds_customer->InsertCommand = "insert into crm_accounts (account,area,phone,street,ward,district,city,cid) values ('@account','@area','@phone','@street','@ward','@district','@city','".$c->id."');";
 
                 $grid = new KoolGrid("grid");
                 $grid->AjaxEnabled = true;
@@ -147,15 +147,6 @@ switch ($action) {
                 foreach ($tree_names as $tree) {
                     $column->AddItem($tree['name']);
                 }
-                $table_mapping->AddColumn($column);
-
-                $column = new GridTextAreaColumn();
-                $column->DataField = "area";
-                $column->HeaderText = $_L['Area'];
-                $validator = new RegularExpressionValidator();
-                $validator->ValidationExpression = "/^\d+(\.\d+)?$/";
-                $validator->ErrorMessage = $_L["Please input correct number"];
-                $column->AddValidator($validator);
                 $table_mapping->AddColumn($column);
 
                 $column = new GridTextAreaColumn();
@@ -209,6 +200,15 @@ switch ($action) {
                 $column->DataField = "phone";
                 $column->HeaderText = $_L['Phone'];
                 $validator = new KoolPhoneValidator();
+                $column->AddValidator($validator);
+                $grid->MasterTable->AddColumn($column);
+
+                $column = new GridTextAreaColumn();
+                $column->DataField = "area";
+                $column->HeaderText = $_L['Area'];
+                $validator = new RegularExpressionValidator();
+                $validator->ValidationExpression = "/^\d+(\.\d+)?$/";
+                $validator->ErrorMessage = $_L["Please input correct number"];
                 $column->AddValidator($validator);
                 $grid->MasterTable->AddColumn($column);
 

@@ -31,7 +31,7 @@ License: You must have a valid license purchased only from cloudonex.com in orde
     {*<link href="{$app_url}ui/lib/fancybox/fancybox.min.css" rel="stylesheet">*}
 
     <link href="{$theme}default/css/app.css?v={$file_build}" rel="stylesheet">
-
+    <link href="{$theme}default/css/custom.css" rel="stylesheet">
     <link href="{$theme}default/css/{$config['nstyle']}.css" rel="stylesheet">
 
 

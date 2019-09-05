@@ -14,6 +14,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{$app_url}favicon-16x16.png">
 
     <link href="{$theme}default/css/app.css?v={$file_build}_b" rel="stylesheet">
+    <link href="{$theme}default/css/custom.css" rel="stylesheet">
 
     {*<link href="{$theme}default/css/bootstrap.min.css" rel="stylesheet">*}
     {*<link href="{$assets}/css/font-awesome.min.css?ver={$file_build}" rel="stylesheet">*}
@@ -169,6 +170,20 @@
                         </li>
                     {/if}
 
+                    <li class="{if $_application_menu eq 'questions'}active{/if}">
+                        <a href="#"><i class="fa fa-question-circle"></i> <span class="nav-label">{$_L['List Questions']}</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="{$_url}contacts/questions">{$_L['List Questions']}</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="{if $_application_menu eq 'videos'}active{/if}">
+                        <a href="#"><i class="icon-videocam"></i> <span class="nav-label">{$_L['List Videos']}</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="{$_url}contacts/videos">{$_L['List Videos']}</a></li>
+
+                        </ul>
+                    </li>
 
                     {*{if isset($config['client_has_sub_client']) && $config['client_has_sub_client'] == 1}*}
 

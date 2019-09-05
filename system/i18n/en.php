@@ -1209,5 +1209,10 @@ $_L = [
     'Amount' => 'Amount',
     'Area' => 'Area',
     'Data Created Successfully.' => 'Data Created Successfully.',
-    'This phone is exited. Please add other phone.' => 'This phone is exited. Please add other phone.'
+    'This phone is exited. Please add other phone.' => 'This phone is exited. Please add other phone.',
+    'List Questions' => 'List Questions',
+    'Question Content' => 'Question Content',
+    'List Videos' => 'List Videos',
+    'Link' => 'Link',
+    'Answer Content' => 'Answer Content'
 ];

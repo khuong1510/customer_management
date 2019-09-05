@@ -126,3 +126,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
+.navbar-default .nav:before {
+    top: 46px !important;
+}
