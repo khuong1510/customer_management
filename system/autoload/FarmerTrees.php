@@ -29,7 +29,7 @@ Class FarmerTrees{
     }
 
     public function createAccount($data){
-
+        $password_default = Password::_crypt("123456");
         $d = ORM::for_table('crm_accounts')->create();
 
         $d->account = trim($data['account']);
@@ -39,6 +39,8 @@ Class FarmerTrees{
         $d->district = trim($data['district']);
         $d->city = trim($data['city']);
         $d->cid = trim($data['cid']);
+        $d->area = trim($data['area']);
+        $d->password = $password_default;
         $d->save();
         $account_id = $d->id();
         return $account_id;
@@ -85,12 +87,17 @@ Class FarmerTrees{
         }
 
         if($msg == ''){
-            $account_id = $this->createAccount($data);
+            if($data['type'] != "Customer"){
+                $account_id = $this->createAccount($data);
+            }
+            else {
+                $account_id = $data['account_id'];
+            }
 
             $d = ORM::for_table('tree_mapping')->create();
             $d->account_id = $account_id;
             $d->tree_id = $data['tree_id'];
-            $d->area = trim($data['area']);
+//            $d->area = trim($data['area']);
             $d->age = trim($data['age']);
             $d->amount = trim($data['amount']);
             $d->save();
@@ -130,17 +137,19 @@ Class FarmerTrees{
             foreach ($trees as $tree) {
                 $amount = ORM::for_table('tree_mapping')->where("tree_id", $tree['name'])->sum('amount');
                 $amount = $amount ? $amount : 0;
-                $area = ORM::for_table('tree_mapping')->where("tree_id", $tree['name'])->sum('area');
-                $area = $area ? $area : 0;
+//                $area = ORM::for_table('tree_mapping')->where("tree_id", $tree['name'])->sum('area');
+//                $area = $area ? $area : 0;
                 $result_trees[] = array("name" => $tree['name'],
-                                        "amount" => $amount,
-                                        "area" => $area
+                                        "amount" => $amount
                     );
             }
         }
         $total_farmer = ORM::for_table('crm_accounts')->where('type', "Customer")->count();
+        $area = ORM::for_table('crm_accounts')->where('type', "Customer")->sum('area');
+        $area = $area ? $area : 0;
         $result = array("tree" => $result_trees,
-                        "total_farmer" => $total_farmer
+                        "total_farmer" => $total_farmer,
+                        "area" => $area
             );
         return $result;
     }

@@ -137,16 +137,13 @@ Class Contacts
                 }
             }
 
-
-
-
-
             if(isset($data['password'])){
                 $password = $data['password'];
                 $password = Password::_crypt($password);
             }
             else{
-                $data['password'] = _raid(6);
+//                $data['password'] = _raid(6);
+                $data['password'] = '123456';
                 $password = Password::_crypt($data['password']);
             }
 

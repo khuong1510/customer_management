@@ -29,21 +29,22 @@
                                     <div class="chart-txt farmer-info">
                                         <div>
                                             <p><span class="amount"><b>Tổng số nông dân:</b></span>
-                                                <span>{$farmer_info['total_farmer']}</span></p><br>
+                                                <span>{$farmer_info['total_farmer']}</span></p><br/>
+                                            <p><span class="amount"><b>Diện tích:</b></span>
+                                                <span>{$farmer_info['area']}</span></p>
+                                            <br>
                                         </div>
                                         <table>
                                             <thead>
                                                 <tr>
                                                     <th>Cây trồng</th>
                                                     <th>Số lượng</th>
-                                                    <th>Diện tích</th>
                                                 </tr>
                                             </thead>
                                             {foreach $farmer_info['tree'] as $item}
                                                 <tr>
                                                     <td class="title">{$item['name']}</td>
                                                     <td>{$item['amount']}</td>
-                                                    <td>{$item['area']}</td>
                                                 </tr>
                                             {/foreach}
                                         </table>

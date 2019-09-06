@@ -14,7 +14,7 @@
                 </div>
 
                 <form method="post" action="{$_url}client/farmer-tree/create_post/" id="iform" name="iform">
-
+                    {if $user->type != "Customer"}
                     <div class="form-group">
                         <label for="account">{$_L['Full Name']}</label>
                         <input type="text" class="form-control" id="account" name="account" value="" >
@@ -42,6 +42,11 @@
                         <input type="text" class="form-control" id="city" name="city" value="">
                     </div>
                     <div class="form-group">
+                        <label for="area">{$_L['Area']}</label>
+                        <input type="text" class="form-control" id="area" name="area" value="">
+                    </div>
+                    {/if}
+                    <div class="form-group">
                         <label for="tree_id">{$_L['Tree Name']}</label>
                         <select class="form-control" id="tree_id" name="tree_id" size="1">
 
@@ -53,10 +58,7 @@
 
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="area">{$_L['Area']}</label>
-                        <input type="text" class="form-control" id="area" name="area" value="">
-                    </div>
+
                     <div class="form-group">
                         <label for="age">{$_L['Age']}</label>
                         <input type="text" class="form-control" id="age" name="age" value="">
@@ -65,7 +67,8 @@
                         <label for="amount">{$_L['Amount']}</label>
                         <input type="text" class="form-control" id="amount" name="amount" value="">
                     </div>
-
+                    <input type="hidden" name="account_id" value="{$user->id}" >
+                    <input type="hidden" name="type" value="{$user->type}" >
                     <button type="submit" id="ib_form_submit" class="btn btn-primary">{$_L['Submit']}</button>
                 </form>
 

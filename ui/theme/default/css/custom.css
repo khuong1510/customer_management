@@ -130,3 +130,15 @@
 .navbar-default .nav:before {
     top: 46px !important;
 }
+
+.Customer .sunsetKGR .kgrLinkDelete {
+    display: none;
+}
+
+.Customer .sunsetKGR .kgrDetailTablesPanel .kgrLinkDelete {
+    display: inline-block;
+}
+
+.chart-statistic-box .chart-txt {
+    height: auto !important;
+}

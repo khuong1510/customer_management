@@ -125,9 +125,7 @@ switch ($action) {
 
 
         $grid = new KoolGrid("grid");
-        $grid->AjaxEnabled = true;
         $grid->DataSource = $ds;
-        $grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
         $grid->RowAlternative = true;
         $grid->AjaxEnabled = true;
         $grid->ColumnWrap = true;
@@ -159,6 +157,7 @@ switch ($action) {
         //Insert Settings
         $table_mapping->InsertSettings->Mode = "Form";
         $table_mapping->InsertSettings->ColumnNumber = 2;
+        $table_mapping->Pager = new GridPrevNextAndNumericPager();
 
         $column = new GridTextAreaColumn();
         $column->DataField = "content";
@@ -234,12 +233,13 @@ switch ($action) {
 
         $db_con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         mysqli_set_charset($db_con, 'utf8');
+        $password_default = Password::_crypt("123456");
 
         $ds = new MySQLiDataSource($db_con);
         $ds->SelectCommand = "select id,account,phone,area,street,ward,district,city from crm_accounts where type='Customer'";
         $ds->UpdateCommand = "update crm_accounts set account='@account', phone='@phone', street='@street', ward='@ward', district ='@district', city='@city', area='@area' where id = @id";
         $ds->DeleteCommand = "delete from crm_accounts where id=@id";
-        $ds->InsertCommand = "insert into crm_accounts (account,phone,area,street,ward,district,city) values ('@account','@phone','@area','@street','@ward','@district','@city');";
+        $ds->InsertCommand = "insert into crm_accounts (account,phone,area,street,ward,district,city,password) values ('@account','@phone','@area','@street','@ward','@district','@city','".$password_default."');";
 
         $grid = new KoolGrid("grid");
         $grid->AjaxEnabled = true;
@@ -404,6 +404,8 @@ switch ($action) {
         $db_con = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         mysqli_set_charset($db_con, 'utf8');
 
+        $password_default = Password::_crypt("123456");
+
         $ds_mapping = new MySQLiDataSource($db_con);
         $ds_mapping->SelectCommand = "select tree_mapping.id,account_id,tree_id,age,amount from tree_mapping ";
         $ds_mapping->UpdateCommand = "update tree_mapping set tree_id='@tree_id', age='@age', amount='@amount' where id = @id";
@@ -414,12 +416,10 @@ switch ($action) {
         $ds_customer->SelectCommand = "select crm_accounts.id,account,phone,crm_accounts.area,street,ward,district,city from crm_accounts where type LIKE '%Customer%'";
         $ds_customer->UpdateCommand = "update crm_accounts set account='@account', phone='@phone', street='@street', ward='@ward', district ='@district', city='@city', area='@area' where id = @id";
         $ds_customer->DeleteCommand = "delete from crm_accounts where id=@id";
-        $ds_customer->InsertCommand = "insert into crm_accounts (account,phone,street,ward,district,city,area) values ('@account','@phone','@street','@ward','@district','@city','@area');";
+        $ds_customer->InsertCommand = "insert into crm_accounts (account,phone,street,ward,district,city,area,password) values ('@account','@phone','@street','@ward','@district','@city','@area','".$password_default."');";
 
         $grid = new KoolGrid("grid");
-        $grid->AjaxEnabled = true;
         $grid->DataSource = $ds;
-        $grid->MasterTable->Pager = new GridPrevNextAndNumericPager();
         $grid->RowAlternative = true;
         $grid->AjaxEnabled = true;
         $grid->ColumnWrap = true;
@@ -450,6 +450,7 @@ switch ($action) {
         //Insert Settings
         $table_mapping->InsertSettings->Mode = "Form";
         $table_mapping->InsertSettings->ColumnNumber = 2;
+        $table_mapping->Pager = new GridPrevNextAndNumericPager();
 
         // Tree Mapping Columns
         $column = new GridDropDownColumn();
