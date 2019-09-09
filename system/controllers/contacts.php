@@ -236,7 +236,7 @@ switch ($action) {
         $password_default = Password::_crypt("123456");
 
         $ds = new MySQLiDataSource($db_con);
-        $ds->SelectCommand = "select id,account,phone,area,street,ward,district,city from crm_accounts where type='Customer'";
+        $ds->SelectCommand = "select id,account,phone,area,street,ward,district,city,deviceToken from crm_accounts where type='Customer'";
         $ds->UpdateCommand = "update crm_accounts set account='@account', phone='@phone', street='@street', ward='@ward', district ='@district', city='@city', area='@area' where id = @id";
         $ds->DeleteCommand = "delete from crm_accounts where id=@id";
         $ds->InsertCommand = "insert into crm_accounts (account,phone,area,street,ward,district,city,password) values ('@account','@phone','@area','@street','@ward','@district','@city','".$password_default."');";
@@ -309,6 +309,11 @@ switch ($action) {
         $column->HeaderText = $_L['City'];
         $grid->MasterTable->AddColumn($column);
 
+        $column = new GridTextAreaColumn();
+        $column->DataField = "deviceToken";
+        $column->HeaderText = "Device Token";
+        $column->ReadOnly = true;
+        $grid->MasterTable->AddColumn($column);
 
         $column = new GridEditDeleteColumn();
         $column->Align = "center";

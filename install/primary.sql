@@ -445,6 +445,7 @@ CREATE TABLE `crm_accounts` (
   `transport_phone` varchar(200) DEFAULT NULL,
   `transport_address` varchar(200) DEFAULT NULL,
   `store` varchar(100) DEFAULT NULL,
+  `deviceToken` text DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
