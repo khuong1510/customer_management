@@ -1214,5 +1214,7 @@ $_L = [
     'Question Content' => 'Question Content',
     'List Videos' => 'List Videos',
     'Link' => 'Link',
-    'Answer Content' => 'Answer Content'
+    'Answer Content' => 'Answer Content',
+    'Message Content' => 'Message Content',
+    'List Messages' => 'List Message'
 ];

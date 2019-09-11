@@ -184,7 +184,13 @@
 
                         </ul>
                     </li>
+                    <li class="{if $_application_menu eq 'messages'}active{/if}">
+                        <a href="#"><i class="fa fa-file-text-o"></i> <span class="nav-label">{$_L['List Messages']}</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="{$_url}contacts/messages">{$_L['List Messages']}</a></li>
 
+                        </ul>
+                    </li>
                     {*{if isset($config['client_has_sub_client']) && $config['client_has_sub_client'] == 1}*}
 
                         {*<li {if $_application_menu eq 'end_users'}class="active"{/if}><a href="#"><i class="fa fa-users"></i> <span class="nav-label">End users</span><span class="fa arrow"></span></a>*}

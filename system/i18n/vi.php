@@ -1213,5 +1213,7 @@ $_L = [
     'Question Content' => 'Nội dung câu hỏi',
     'List Videos' => 'Danh sách video',
     'Link' => 'Đường dẫn',
-    'Answer Content' => 'Câu trả lời'
+    'Answer Content' => 'Câu trả lời',
+    'Message Content' => 'Nội dung thông báo',
+    'List Messages' => 'Danh sách thông báo'
 ];
